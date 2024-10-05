@@ -107,7 +107,7 @@
 }
 
 body {
-  background-color: #f3f3f3;
+  background-color: #0000000d;
   color: #1e1e1e;
 }
 
@@ -121,7 +121,7 @@ body {
 
 .sidebar {
   transition: width 0.3s;
-  background-color: #044982;
+  background-color: #ffffff;
   height: auto;
   min-height: 100vh;
 }

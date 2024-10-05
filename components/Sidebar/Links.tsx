@@ -13,26 +13,16 @@ import {
   PropertyIcon,
   ServiceIcon,
   SupportIcon,
-  UtilityIcon,
   VisitorIcon,
 } from "./Icons"
 import { LogoIcon } from "components/Icons/Icons"
 
 const links = [
-  { name: "Dashboard", href: "/dashboard", icon: DashboardIcon },
-  { name: "Estates", href: "/estates", icon: EstatesIcon },
-  { name: "Rents", href: "/rents", icon: HomeIcon },
-  { name: "Properties", href: "/properties", icon: PropertyIcon },
-  {
-    name: "Utilities",
-    href: "",
-    icon: UtilityIcon,
-    sublinks: [
-      { name: "Power", href: "/utilities/power" },
-      { name: "Water", href: "/utilities/water" },
-      { name: "Gas", href: "/utilities/gas" },
-    ],
-  },
+  { name: "Cases", href: "/cases", icon: DashboardIcon },
+  { name: "Doctors", href: "/doctors", icon: EstatesIcon },
+  { name: "Upload Cases", href: "/upload-cases", icon: HomeIcon },
+  { name: "Recently Viewed", href: "/recently-viewed", icon: ChatIcon },
+  { name: "Notification", href: "/Notification", icon: PropertyIcon },
 ]
 
 const secondlinks = [
@@ -65,7 +55,6 @@ export function Links({ isCollapsed }: LinksProps) {
         return (
           <div key={link.name}>
             <div
-              onClick={() => link.sublinks && handleExpand(link.name)}
               className={clsx("dashboard-style cursor-pointer", {
                 "active-dashboard": isActive,
               })}
@@ -81,27 +70,9 @@ export function Links({ isCollapsed }: LinksProps) {
                   >
                     {link.name}
                   </p>
-                  {link.sublinks && (
-                    <span
-                      className={clsx("arrow", {
-                        down: isExpanded,
-                      })}
-                    />
-                  )}
                 </div>
               </Link>
             </div>
-            {isExpanded && !isCollapsed && link.sublinks && (
-              <div className="ml-6">
-                {link.sublinks.map((sublink) => (
-                  <Link key={sublink.name} href={sublink.href} className="dashboard-style">
-                    <div className="flex items-center gap-2 pl-5">
-                      <p className="text-sm font-semibold">{sublink.name}</p>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            )}
           </div>
         )
       })}

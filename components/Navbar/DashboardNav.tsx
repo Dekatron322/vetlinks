@@ -16,7 +16,7 @@ const DashboardNav = () => {
 
   return (
     <>
-      <nav className="hidden border-b bg-[#F2F6FD] px-16 py-4 md:block">
+      <nav className="body hidden border-b px-16 py-4 md:block">
         <div className="flexBetween">
           <div className="flex content-center gap-32">
             <Link href="/" className="content-center">
