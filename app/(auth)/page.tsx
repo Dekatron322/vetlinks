@@ -3,9 +3,7 @@ import React, { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-import AOS from "aos"
-import "aos/dist/aos.css"
-import Footer from "components/Footer/Footer"
+import { motion } from "framer-motion"
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined"
 
 const Page: React.FC = () => {
@@ -62,13 +60,6 @@ const Page: React.FC = () => {
   //   }
   // }
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    })
-  }, [])
-
   // UseEffect to automatically hide notifications after a timeout
   useEffect(() => {
     if (showSuccessNotification || showErrorNotification) {
@@ -84,7 +75,12 @@ const Page: React.FC = () => {
   return (
     <>
       <div className="flex h-screen w-full items-center justify-center bg-[#F1F1F1]">
-        <div className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]">
+        <motion.div
+          className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
           <div className="w-auto justify-center   ">
             <div className=" flex items-center justify-center py-6 xl:min-w-[600px]">
               <Image src="/AuthImages/login.svg" width={59} height={24} alt="profile" className="object-contain" />
@@ -169,7 +165,7 @@ const Page: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       {showSuccessNotification && (
         <div className="animation-fade-in absolute bottom-16 m-5 flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#000000] bg-[#92E3A9] text-[#000000] shadow-[#05420514] md:right-16">

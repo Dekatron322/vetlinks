@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 const Page: React.FC = () => {
   const [username, setUsername] = useState("")
@@ -38,10 +39,22 @@ const Page: React.FC = () => {
   return (
     <>
       <div className="flex h-screen w-full items-center justify-center bg-[#F1F1F1]">
-        <div className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]">
+        <motion.div
+          className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
           <div className="w-auto justify-center   ">
             <div className="flex items-center px-6 py-6 xl:min-w-[600px]">
-              <Image src="/AuthImages/CaretUp.svg" width={24} height={24} alt="profile" className="object-contain" />
+              <Image
+                src="/AuthImages/CaretUp.svg"
+                width={24}
+                height={24}
+                alt="profile"
+                className="cursor-pointer object-contain"
+                onClick={() => router.back()}
+              />
               <div className="flex w-full items-center justify-center">
                 <Image
                   src="/AuthImages/Create_Account.svg"
@@ -173,7 +186,7 @@ const Page: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       {showSuccessNotification && (
         <div className="animation-fade-in absolute bottom-16 m-5 flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#000000] bg-[#92E3A9] text-[#000000] shadow-[#05420514] md:right-16">

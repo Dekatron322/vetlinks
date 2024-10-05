@@ -2,6 +2,7 @@
 import React, { useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 const Page: React.FC = () => {
   const [loading, setLoading] = useState(false)
@@ -29,7 +30,12 @@ const Page: React.FC = () => {
   return (
     <>
       <div className="flex h-screen w-full items-center justify-center bg-[#F1F1F1]">
-        <div className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]">
+        <motion.div
+          className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
           <div className="w-auto justify-center">
             <div className="flex items-center px-6 py-6 xl:min-w-[600px]">
               <Image
@@ -107,7 +113,7 @@ const Page: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   )
