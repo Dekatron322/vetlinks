@@ -41,7 +41,14 @@ const Page: React.FC = () => {
         <div className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]">
           <div className="w-auto justify-center   ">
             <div className="flex items-center px-6 py-6 xl:min-w-[600px]">
-              <Image src="/AuthImages/CaretUp.svg" width={24} height={24} alt="profile" className="object-contain" />
+              <Image
+                src="/AuthImages/CaretUp.svg"
+                width={24}
+                height={24}
+                alt="profile"
+                className="cursor-pointer object-contain"
+                onClick={() => router.back()}
+              />
               <div className="flex w-full items-center justify-center">
                 <Image
                   src="/AuthImages/PersonalInfo..svg"
