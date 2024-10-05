@@ -38,15 +38,15 @@ const Page: React.FC = () => {
 
   return (
     <>
-      <div className="flex h-screen w-full items-center justify-center bg-[#F1F1F1]">
+      <div className="flex w-full items-center justify-center bg-[#F1F1F1] max-md:bg-[#ffffff] md:h-screen">
         <motion.div
-          className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]"
+          className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[100%] xl:min-w-[600px]"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 1 }}
         >
-          <div className="w-auto justify-center   ">
-            <div className="flex items-center px-6 py-6 xl:min-w-[600px]">
+          <div className="w-full justify-center   ">
+            <div className="flex items-center py-6 max-md:px-3 md:px-6 xl:min-w-[600px]">
               <Image
                 src="/AuthImages/CaretUp.svg"
                 width={24}
@@ -147,7 +147,7 @@ const Page: React.FC = () => {
                 </div>
 
                 <label className=" text-xs">Gender</label>
-                <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
+                <div className="search-bg mb-2 h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-md:w-[340px] max-sm:mb-2 xl:w-[536px]">
                   <div className="flex">
                     <input
                       type="text"
@@ -164,19 +164,19 @@ const Page: React.FC = () => {
               </form>
             </div>
 
-            <div className="mt-6 w-full border-b border-[#0000000D]"></div>
+            <div className="mt-6 w-full border-b border-[#0000000D] max-md:hidden"></div>
             <div className="my-4 justify-center gap-1 ">
-              <div className="mt-5 flex w-full gap-6 px-6">
+              <div className="mt-5 flex w-full justify-center gap-6 md:px-6">
                 <button
                   type="submit"
-                  className="button-primary h-[42px] w-full rounded-lg max-sm:h-[42px]"
+                  className="button-primary h-[42px] w-full rounded-lg max-md:w-[340px] max-sm:h-[42px]"
                   disabled={loading}
                   onClick={handleSubmit}
                 >
                   {loading ? "Signing In..." : "Proceed"}
                 </button>
               </div>
-              <div className="mt-6 w-full border-b border-[#0000000D]"></div>
+              <div className="mt-6 w-full border-b border-[#0000000D] max-md:hidden"></div>
 
               <div className="my-4 flex justify-center gap-1 px-6">
                 <p className="text-base text-[#4F4F4F]">Dont Have an Account Yet? </p>
