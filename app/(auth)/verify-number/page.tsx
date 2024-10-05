@@ -76,27 +76,30 @@ const Page: React.FC = () => {
                     />
                   </div>
                 </div>
-
-                <div className="mt-5 flex w-full gap-6">
-                  <button
-                    type="submit"
-                    className="button-primary h-[42px] w-full rounded-lg max-sm:h-[42px]"
-                    disabled={loading}
-                    onClick={handleSubmit}
-                  >
-                    {loading ? "Signing In..." : "Proceed"}
-                  </button>
-                </div>
               </form>
             </div>
 
             <div className="mt-6 w-full border-b border-[#0000000D]"></div>
 
-            <div className="my-4 flex justify-center gap-1">
-              <p className="text-base text-[#4F4F4F]">Dont Have an Account Yet? </p>
-              <Link href="/signup" className="text-base text-[#1B5EED]">
-                Sign Up
-              </Link>
+            <div className="my-4 justify-center gap-1 px-6">
+              <div className="mt-5 flex w-full gap-6">
+                <button
+                  type="submit"
+                  className="button-primary h-[42px] w-full rounded-lg max-sm:h-[42px]"
+                  disabled={loading}
+                  onClick={handleSubmit}
+                >
+                  {loading ? "Signing In..." : "Proceed"}
+                </button>
+              </div>
+              <div className="mt-6 w-full border-b border-[#0000000D]"></div>
+
+              <div className="my-4 flex justify-center gap-1 px-6">
+                <p className="text-base text-[#4F4F4F]">Dont Have an Account Yet? </p>
+                <Link href="/signup" className="text-base text-[#1B5EED]">
+                  Sign Up
+                </Link>
+              </div>
             </div>
           </div>
         </div>

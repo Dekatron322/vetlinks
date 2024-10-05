@@ -3,19 +3,14 @@ import React, { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-import AOS from "aos"
-import "aos/dist/aos.css"
-import Footer from "components/Footer/Footer"
-import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined"
 
 const Page: React.FC = () => {
   const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
+
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [showSuccessNotification, setShowSuccessNotification] = useState(false)
   const [showErrorNotification, setShowErrorNotification] = useState(false)
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false)
 
   const router = useRouter() // Initialize the router
 
@@ -23,52 +18,15 @@ const Page: React.FC = () => {
     setUsername(event.target.value)
   }
 
-  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(event.target.value)
+  const handleSubmit = () => {
+    setLoading(true)
+
+    {
+      router.push("/personal-info")
+    }
+
+    setLoading(false) // You can also move this after the redirect if you want
   }
-
-  const togglePasswordVisibility = () => {
-    setIsPasswordVisible(!isPasswordVisible)
-  }
-
-  // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault()
-  //   setLoading(true)
-  //   setError(null)
-
-  //   try {
-  //     const response = await fetch("https://amd-backend-1.onrender.com/custom-user/sign-in/", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({ username, password }),
-  //     })
-
-  //     if (!response.ok) {
-  //       throw new Error("Failed to sign in. Please try again.")
-  //     }
-
-  //     setShowSuccessNotification(true)
-  //     await new Promise((resolve) => setTimeout(resolve, 3000))
-
-  //     setLoading(false)
-
-  //     router.push("/dashboard")
-  //   } catch (error: any) {
-  //     setError(error.message)
-  //     setShowErrorNotification(true)
-  //     setLoading(false)
-  //   }
-  // }
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    })
-  }, [])
-
   // UseEffect to automatically hide notifications after a timeout
   useEffect(() => {
     if (showSuccessNotification || showErrorNotification) {
@@ -86,25 +44,31 @@ const Page: React.FC = () => {
       <div className="flex h-screen w-full items-center justify-center bg-[#F1F1F1]">
         <div className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]">
           <div className="w-auto justify-center   ">
-            <div className=" flex items-center justify-center py-6 xl:min-w-[600px]">
-              <Image src="/AuthImages/login.svg" width={59} height={24} alt="profile" className="object-contain" />
+            <div className="flex items-center px-6 py-6 xl:min-w-[600px]">
+              <Image src="/AuthImages/CaretUp.svg" width={24} height={24} alt="profile" className="object-contain" />
+              <div className="flex w-full items-center justify-center">
+                <Image
+                  src="/AuthImages/Professional.svg"
+                  width={166}
+                  height={24}
+                  alt="profile"
+                  className="object-contain"
+                />
+              </div>
             </div>
             <div className="w-full border-b border-[#0000000D] "></div>
-            <div className=" flex  flex-col items-center justify-center py-6 xl:min-w-[600px]">
-              <Image src="/AuthImages/Vetlinks.svg" width={80} height={74} alt="profile" className="object-contain" />
-              <Image src="/AuthImages/vetlinkss.svg" width={108} height={74} alt="profile" className="object-contain" />
-            </div>
+
             <div className="w-full border-b border-[#0000000D]"></div>
 
             <div className="mt-5 flex w-full justify-center">
-              <form>
-                <label className="text-xs">Email</label>
-                <div className="search-bg mb-5 h-[48px]  items-center justify-between rounded-lg px-3 py-3  hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536x]">
+              <form onSubmit={handleSubmit}>
+                <label className="text-xs">VCN number</label>
+                <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
                   <div className="flex">
                     <input
                       type="text"
                       id="username"
-                      placeholder="Shereefadamu001@gmail.com"
+                      placeholder="VCN234567"
                       className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
                       style={{ width: "100%", height: "24px" }}
                       value={username}
@@ -113,37 +77,53 @@ const Page: React.FC = () => {
                   </div>
                 </div>
 
-                <label className="text-xs">Password</label>
-                <div className="search-bg  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
+                <label className=" text-xs">Category of Specialization</label>
+                <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
                   <div className="flex">
                     <input
-                      type={isPasswordVisible ? "text" : "password"}
-                      id="password"
-                      placeholder="*****************"
+                      type="text"
+                      id="username"
+                      placeholder="12/12/2001"
                       className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
                       style={{ width: "100%", height: "24px" }}
-                      value={password}
-                      onChange={handlePasswordChange}
+                      value={username}
+                      onChange={handleUsernameChange}
                     />
-                    <button type="button" className="focus:outline-none" onClick={togglePasswordVisibility}>
-                      {isPasswordVisible ? (
-                        <RemoveRedEyeOutlinedIcon />
-                      ) : (
-                        <Image
-                          className="icon-style"
-                          src="/AuthImages/eye-close-line.png"
-                          width={24}
-                          height={24}
-                          alt="toggle password visibility"
-                        />
-                      )}
-                    </button>
+                    <Image src="/AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
                   </div>
                 </div>
 
-                <Link href="/forgot-password" className="flex content-center items-center justify-end gap-2">
-                  <p className="mt-2 text-xs text-[#4F4F4F]">Forgot Password</p>
-                </Link>
+                <label className=" text-xs">University</label>
+                <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
+                  <div className="flex">
+                    <input
+                      type="text"
+                      id="username"
+                      placeholder="12/12/2001"
+                      className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
+                      style={{ width: "100%", height: "24px" }}
+                      value={username}
+                      onChange={handleUsernameChange}
+                    />
+                    <Image src="/AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
+                  </div>
+                </div>
+
+                <label className=" text-xs">State</label>
+                <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
+                  <div className="flex">
+                    <input
+                      type="text"
+                      id="username"
+                      placeholder="12/12/2001"
+                      className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
+                      style={{ width: "100%", height: "24px" }}
+                      value={username}
+                      onChange={handleUsernameChange}
+                    />
+                    <Image src="/AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
+                  </div>
+                </div>
               </form>
             </div>
 
@@ -155,6 +135,7 @@ const Page: React.FC = () => {
                   type="submit"
                   className="button-primary h-[42px] w-full rounded-lg max-sm:h-[42px]"
                   disabled={loading}
+                  onClick={handleSubmit}
                 >
                   {loading ? "Signing In..." : "Proceed"}
                 </button>
