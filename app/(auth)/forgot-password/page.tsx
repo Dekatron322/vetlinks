@@ -3,12 +3,11 @@ import React, { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-import AOS from "aos"
-import "aos/dist/aos.css"
-import Footer from "components/Footer/Footer"
+import { motion } from "framer-motion"
 
 const Page: React.FC = () => {
   const [username, setUsername] = useState("")
+
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [showSuccessNotification, setShowSuccessNotification] = useState(false)
@@ -20,97 +19,114 @@ const Page: React.FC = () => {
     setUsername(event.target.value)
   }
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
+  const handleSubmit = () => {
     setLoading(true)
-    setError(null)
 
-    try {
-      // Simulate an API call or some asynchronous action
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-
-      setShowSuccessNotification(true)
-      setLoading(false)
-
-      // Redirect to the success page
-      router.push("/success")
-    } catch (error) {
-      setError("Failed to sign in. Please try again.")
-      setShowErrorNotification(true)
-      setLoading(false)
+    {
+      router.push("/personal-info")
     }
-  }
 
+    setLoading(false) // You can also move this after the redirect if you want
+  }
+  // UseEffect to automatically hide notifications after a timeout
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    })
-  }, [])
+    if (showSuccessNotification || showErrorNotification) {
+      const timer = setTimeout(() => {
+        setShowSuccessNotification(false)
+        setShowErrorNotification(false)
+      }, 5000) // Notifications will disappear after 5 seconds
+
+      return () => clearTimeout(timer) // Clean up the timeout if component unmounts
+    }
+  }, [showSuccessNotification, showErrorNotification])
 
   return (
     <>
-      <div className="flex h-screen w-full items-center justify-center bg-[#22266A]">
-        <div
-          className="auth flex rounded-[20px] bg-[#FFFFFF] max-sm:w-[95%] xl:max-w-[434px]"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="500"
+      <div className="flex h-screen w-full items-center justify-center bg-[#F1F1F1]">
+        <motion.div
+          className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1 }}
         >
-          <div className="w-full justify-center px-[53px] py-[60px] max-sm:px-7">
-            <div className="mb-8 flex items-center justify-center">
-              <Image src="/AuthImages/amd-logo.png" width={250} height={74} alt="profile" />
-            </div>
-            <div className="mb-8 flex items-center">
-              <Image src="AuthImages/ForgotPassword.svg" width={250} height={38} alt="profile" />
-            </div>
-            <form onSubmit={handleSubmit}>
-              <div className="search-bg mb-3  h-[56px] items-center  justify-between  rounded-[10px] px-3 py-2 hover:border-[#EEC202] focus:border-[#EEC202] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[328px]">
-                <p className="text-xs text-[#9D99AC]">Email</p>
-                <div className="flex">
-                  <input
-                    type="text"
-                    id="username"
-                    placeholder="Shereefadamu001@gmail.com"
-                    className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
-                    style={{ width: "100%", height: "24px" }}
-                    value={username}
-                    onChange={handleUsernameChange}
-                  />
-                </div>
+          <div className="w-auto justify-center   ">
+            <div className="flex items-center px-6 py-6 xl:min-w-[600px]">
+              <Image
+                src="/AuthImages/CaretUp.svg"
+                width={24}
+                height={24}
+                alt="profile"
+                className="cursor-pointer object-contain"
+                onClick={() => router.back()}
+              />
+              <div className="flex w-full items-center justify-center">
+                <Image
+                  src="/AuthImages/ForgotPassword.svg"
+                  width={166}
+                  height={24}
+                  alt="profile"
+                  className="object-contain"
+                />
               </div>
+            </div>
+            <div className="w-full border-b border-[#0000000D] "></div>
 
-              <div className="mt-5 flex w-full gap-6">
+            <div className="w-full border-b border-[#0000000D]"></div>
+
+            <div className="mt-5 flex w-full justify-center">
+              <form onSubmit={handleSubmit}>
+                <label className="text-xs">Email</label>
+                <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
+                  <div className="flex">
+                    <input
+                      type="text"
+                      id="username"
+                      placeholder="Shereefadamu001@gmail.com"
+                      className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
+                      style={{ width: "100%", height: "24px" }}
+                      value={username}
+                      onChange={handleUsernameChange}
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div className="mt-6 w-full border-b border-[#0000000D]"></div>
+
+            <div className="my-4 justify-center gap-1 ">
+              <div className="mt-5 flex w-full gap-6 px-6">
                 <button
                   type="submit"
-                  className="button-primary h-[50px] w-full rounded-md max-sm:h-[45px]"
+                  className="button-primary h-[42px] w-full rounded-lg max-sm:h-[42px]"
                   disabled={loading}
+                  onClick={handleSubmit}
                 >
-                  {loading ? "Loading..." : "Continue"}
+                  {loading ? "Signing In..." : "Proceed"}
                 </button>
               </div>
-            </form>
+              <div className="mt-6 w-full border-b border-[#0000000D]"></div>
 
-            <div className="mt-2 flex justify-center gap-1">
-              <p className="text-xs text-[#044982]">Don't have an Account </p>
-              <Link href="/signup" className="text-xs text-[#EEC202] underline">
-                Create Account
-              </Link>
+              <div className="my-4 flex justify-center gap-1 px-6">
+                <p className="text-base text-[#4F4F4F]">Dont Have an Account Yet? </p>
+                <Link href="/signup" className="text-base text-[#1B5EED]">
+                  Sign Up
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-        <Footer />
+        </motion.div>
       </div>
       {showSuccessNotification && (
-        <div className="animation-fade-in absolute bottom-16 m-5  flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#0F920F] bg-[#F2FDF2] text-[#0F920F] shadow-[#05420514] md:right-16">
-          <span className="clash-font text-sm  text-[#92E3A9]">Login Successfully</span>
-          <Image src="AuthImages/Star.svg" width={16} height={16} alt="dekalo" />
+        <div className="animation-fade-in absolute bottom-16 m-5 flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#000000] bg-[#92E3A9] text-[#000000] shadow-[#05420514] md:right-16">
+          <span className="clash-font text-sm text-[#000000]">Login Successfully</span>
+          <Image src="/AuthImages/Star2.svg" width={28.26} height={28.26} alt="dekalo" />
         </div>
       )}
       {showErrorNotification && (
-        <div className="animation-fade-in 0 absolute bottom-16  m-5 flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#D14343] bg-[#FEE5E5] text-[#D14343] shadow-[#05420514] md:right-16">
-          <Image src="AuthImages/Star.svg" width={16} height={16} alt="dekalo" />
-          <span className="clash-font text-sm  text-[#D14343]">{error}</span>
+        <div className="animation-fade-in absolute bottom-16 m-5 flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#D14343] bg-[#FEE5E5] text-[#D14343] shadow-[#05420514] md:right-16">
+          <span className="clash-font text-sm text-[#D14343]">{error}</span>
+          <Image src="/AuthImages/failed.png" width={28.26} height={28.26} alt="dekalo" />
         </div>
       )}
     </>

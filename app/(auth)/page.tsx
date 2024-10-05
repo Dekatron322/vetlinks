@@ -74,39 +74,37 @@ const Page: React.FC = () => {
 
   return (
     <>
-      <div className="flex h-screen w-full items-center justify-center bg-[#F1F1F1]">
+      <div className="flex h-screen w-full items-center justify-center bg-[#F1F1F1] max-md:bg-[#ffffff]">
         <motion.div
-          className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]"
+          className=" flex  justify-center bg-[#ffffff]  max-sm:w-[100%] xl:min-w-[600px]"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 1 }}
         >
-          <div className="w-auto justify-center   ">
-            <div className=" flex items-center justify-center py-6 xl:min-w-[600px]">
+          <div className="w-full justify-center   ">
+            <div className=" flex items-center justify-center py-6 max-md:hidden xl:min-w-[600px]">
               <Image src="/AuthImages/login.svg" width={59} height={24} alt="profile" className="object-contain" />
             </div>
-            <div className="w-full border-b border-[#0000000D] "></div>
+            <div className="w-full border-b border-[#0000000D] max-md:hidden"></div>
             <div className=" flex  flex-col items-center justify-center py-6 xl:min-w-[600px]">
               <Image src="/AuthImages/Vetlinks.svg" width={80} height={74} alt="profile" className="object-contain" />
               <Image src="/AuthImages/vetlinkss.svg" width={108} height={74} alt="profile" className="object-contain" />
             </div>
-            <div className="w-full border-b border-[#0000000D]"></div>
+            <div className="w-full border-b border-[#0000000D] max-md:hidden"></div>
 
-            <div className="mt-5 flex w-full justify-center">
+            <div className="flex w-full justify-center md:mt-5">
               <form>
                 <label className="text-xs">Email</label>
-                <div className="search-bg mb-5 h-[48px]  items-center justify-between rounded-lg px-3 py-3  hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536x]">
-                  <div className="flex">
-                    <input
-                      type="text"
-                      id="username"
-                      placeholder="Shereefadamu001@gmail.com"
-                      className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
-                      style={{ width: "100%", height: "24px" }}
-                      value={username}
-                      onChange={handleUsernameChange}
-                    />
-                  </div>
+                <div className="search-bg mb-5 h-[48px]  items-center justify-between rounded-lg px-3 py-3  hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-md:w-[340px]  max-sm:mb-2 xl:w-[536x]">
+                  <input
+                    type="text"
+                    id="username"
+                    placeholder="Shereefadamu001@gmail.com"
+                    className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
+                    style={{ width: "100%", height: "24px" }}
+                    value={username}
+                    onChange={handleUsernameChange}
+                  />
                 </div>
 
                 <label className="text-xs">Password</label>
@@ -116,7 +114,7 @@ const Page: React.FC = () => {
                       type={isPasswordVisible ? "text" : "password"}
                       id="password"
                       placeholder="*****************"
-                      className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
+                      className="h-[24px]  bg-transparent text-base outline-none focus:outline-none"
                       style={{ width: "100%", height: "24px" }}
                       value={password}
                       onChange={handlePasswordChange}
@@ -143,19 +141,19 @@ const Page: React.FC = () => {
               </form>
             </div>
 
-            <div className="mt-6 w-full border-b border-[#0000000D]"></div>
+            <div className="mt-6 w-full border-b border-[#0000000D] max-md:hidden"></div>
 
             <div className="my-4 justify-center gap-1 ">
-              <div className="mt-5 flex w-full gap-6 px-6">
+              <div className="mt-5 flex w-full justify-center  gap-6 md:px-7">
                 <button
                   type="submit"
-                  className="button-primary h-[42px] w-full rounded-lg max-sm:h-[42px]"
+                  className="button-primary h-[42px] w-full rounded-lg max-md:w-[340px] max-sm:h-[42px]"
                   disabled={loading}
                 >
                   {loading ? "Signing In..." : "Proceed"}
                 </button>
               </div>
-              <div className="mt-6 w-full border-b border-[#0000000D]"></div>
+              <div className="mt-6 w-full border-b border-[#0000000D] max-md:hidden"></div>
 
               <div className="my-4 flex justify-center gap-1 px-6">
                 <p className="text-base text-[#4F4F4F]">Dont Have an Account Yet? </p>
