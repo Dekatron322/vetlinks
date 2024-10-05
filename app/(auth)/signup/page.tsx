@@ -29,9 +29,9 @@ const Page: React.FC = () => {
 
   return (
     <>
-      <div className="flex h-screen w-full items-center justify-center bg-[#F1F1F1]">
+      <div className="flex h-screen w-full items-center justify-center bg-[#F1F1F1] max-md:bg-[#ffffff]">
         <motion.div
-          className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[95%] xl:min-w-[600px]"
+          className="auth flex  justify-center bg-[#FFFFFF]  max-sm:w-[100%] xl:min-w-[600px]"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 1 }}
