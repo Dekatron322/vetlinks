@@ -20,7 +20,7 @@ const Page: React.FC = () => {
     if (selectedOption === "doctor") {
       router.push("/verify-number") // Redirect to the doctor's dashboard
     } else if (selectedOption === "others") {
-      router.push("/others-dashboard") // Redirect to the "others" dashboard
+      router.push("/others") // Redirect to the "others" dashboard
     }
 
     setLoading(false) // You can also move this after the redirect if you want

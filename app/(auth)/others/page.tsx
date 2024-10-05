@@ -18,14 +18,10 @@ const Page: React.FC = () => {
     setUsername(event.target.value)
   }
 
-  const handleSubmit = () => {
-    setLoading(true)
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault() // Prevent default form submission behavior
 
-    {
-      router.push("/personal-info")
-    }
-
-    setLoading(false) // You can also move this after the redirect if you want
+    router.push("/professional-info")
   }
   // UseEffect to automatically hide notifications after a timeout
   useEffect(() => {
@@ -48,7 +44,7 @@ const Page: React.FC = () => {
               <Image src="/AuthImages/CaretUp.svg" width={24} height={24} alt="profile" className="object-contain" />
               <div className="flex w-full items-center justify-center">
                 <Image
-                  src="/AuthImages/Professional.svg"
+                  src="/AuthImages/Create_Account.svg"
                   width={166}
                   height={24}
                   alt="profile"
@@ -62,13 +58,27 @@ const Page: React.FC = () => {
 
             <div className="mt-5 flex w-full justify-center">
               <form onSubmit={handleSubmit}>
-                <label className="text-xs">VCN number</label>
+                <label className="text-xs">First Name</label>
                 <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
                   <div className="flex">
                     <input
                       type="text"
                       id="username"
-                      placeholder="VCN234567"
+                      placeholder="Theophilus"
+                      className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
+                      style={{ width: "100%", height: "24px" }}
+                      value={username}
+                      onChange={handleUsernameChange}
+                    />
+                  </div>
+                </div>
+                <label className=" text-xs">Last Name</label>
+                <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
+                  <div className="flex">
+                    <input
+                      type="text"
+                      id="username"
+                      placeholder="Thitus"
                       className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
                       style={{ width: "100%", height: "24px" }}
                       value={username}
@@ -77,7 +87,37 @@ const Page: React.FC = () => {
                   </div>
                 </div>
 
-                <label className=" text-xs">Category of Specialization</label>
+                <label className=" text-xs">Email</label>
+                <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
+                  <div className="flex">
+                    <input
+                      type="text"
+                      id="username"
+                      placeholder="Shereefadamu001@gmail.com"
+                      className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
+                      style={{ width: "100%", height: "24px" }}
+                      value={username}
+                      onChange={handleUsernameChange}
+                    />
+                  </div>
+                </div>
+
+                <label className=" text-xs">Phone Nubmer</label>
+                <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
+                  <div className="flex">
+                    <input
+                      type="text"
+                      id="username"
+                      placeholder="08129859405"
+                      className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
+                      style={{ width: "100%", height: "24px" }}
+                      value={username}
+                      onChange={handleUsernameChange}
+                    />
+                  </div>
+                </div>
+
+                <label className=" text-xs">Date of Birth</label>
                 <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
                   <div className="flex">
                     <input
@@ -89,27 +129,11 @@ const Page: React.FC = () => {
                       value={username}
                       onChange={handleUsernameChange}
                     />
-                    <Image src="/AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
+                    <Image src="/AuthImages/CalendarDots.svg" width={24} height={24} alt="dekalo" />
                   </div>
                 </div>
 
-                <label className=" text-xs">University</label>
-                <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
-                  <div className="flex">
-                    <input
-                      type="text"
-                      id="username"
-                      placeholder="12/12/2001"
-                      className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
-                      style={{ width: "100%", height: "24px" }}
-                      value={username}
-                      onChange={handleUsernameChange}
-                    />
-                    <Image src="/AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
-                  </div>
-                </div>
-
-                <label className=" text-xs">State</label>
+                <label className=" text-xs">Gender</label>
                 <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
                   <div className="flex">
                     <input
@@ -128,16 +152,15 @@ const Page: React.FC = () => {
             </div>
 
             <div className="mt-6 w-full border-b border-[#0000000D]"></div>
-
-            <div className="my-4 justify-center gap-1 ">
-              <div className="mt-5 flex w-full gap-6 px-6">
+            <div className="my-4 justify-center gap-1 px-6">
+              <div className="mt-5 flex w-full gap-6">
                 <button
                   type="submit"
                   className="button-primary h-[42px] w-full rounded-lg max-sm:h-[42px]"
                   disabled={loading}
                   onClick={handleSubmit}
                 >
-                  {loading ? "Signing In..." : "Proceed"}
+                  {loading ? "Signing In..." : "Continue"}
                 </button>
               </div>
               <div className="mt-6 w-full border-b border-[#0000000D]"></div>

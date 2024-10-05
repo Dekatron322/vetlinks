@@ -81,8 +81,8 @@ const Page: React.FC = () => {
 
             <div className="mt-6 w-full border-b border-[#0000000D]"></div>
 
-            <div className="my-4 justify-center gap-1 px-6">
-              <div className="mt-5 flex w-full gap-6">
+            <div className="my-4 justify-center gap-1 ">
+              <div className="mt-5 flex w-full gap-6 px-6">
                 <button
                   type="submit"
                   className="button-primary h-[42px] w-full rounded-lg max-sm:h-[42px]"
