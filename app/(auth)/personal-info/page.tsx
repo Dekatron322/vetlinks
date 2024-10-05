@@ -67,8 +67,6 @@ const Page: React.FC = () => {
             </div>
             <div className="w-full border-b border-[#0000000D] "></div>
 
-            <div className="w-full border-b border-[#0000000D]"></div>
-
             <div className="mt-5 flex w-full justify-center">
               <form onSubmit={handleSubmit}>
                 <label className="text-xs">First Name</label>
