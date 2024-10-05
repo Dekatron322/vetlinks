@@ -12,20 +12,26 @@ const Page: React.FC = () => {
   const [showSuccessNotification, setShowSuccessNotification] = useState(false)
   const [showErrorNotification, setShowErrorNotification] = useState(false)
 
-  const router = useRouter() // Initialize the router
+  const router = useRouter()
 
   const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value)
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault() // Prevent default form submission behavior
     setLoading(true)
 
-    {
+    // Simulate success/failure conditions for testing
+    if (username === "") {
+      setError("VCN Number is required")
+      setShowErrorNotification(true)
+      setLoading(false)
+    } else {
+      setShowSuccessNotification(true)
       router.push("/personal-info")
+      setLoading(false)
     }
-
-    setLoading(false) // You can also move this after the redirect if you want
   }
   // UseEffect to automatically hide notifications after a timeout
   useEffect(() => {
