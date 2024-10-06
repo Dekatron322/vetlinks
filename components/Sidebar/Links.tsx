@@ -4,16 +4,17 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import {
-  AdminIcon,
+  CasesIcon,
   ChatIcon,
   DashboardIcon,
   EstatesIcon,
+  GuidelineIcon,
   HomeIcon,
-  LogoutIcon,
+  LogoutsIcon,
   PropertyIcon,
-  ServiceIcon,
+  SavedCasesIcon,
+  SettingsIcon,
   SupportIcon,
-  VisitorIcon,
 } from "./Icons"
 import { LogoIcon } from "components/Icons/Icons"
 
@@ -26,11 +27,18 @@ const links = [
 ]
 
 const secondlinks = [
-  { name: "Chats", href: "/chats", icon: ChatIcon },
-  { name: "Service Charge", href: "/service-charge", icon: ServiceIcon },
-  { name: "Visitors Management", href: "/visitors-management", icon: VisitorIcon },
-  { name: "Admin", href: "/admin", icon: AdminIcon },
-  { name: "Logout", href: "/logout", icon: LogoutIcon },
+  { name: "My Cases", href: "/my-cases", icon: CasesIcon },
+  { name: "Saved Cases", href: "/saved-cases", icon: SavedCasesIcon },
+]
+
+const thirdlinks = [
+  { name: "Guidlines And Best Practices", href: "/guidlines", icon: GuidelineIcon },
+  { name: "Support And Help", href: "/saved-cases", icon: SupportIcon },
+]
+
+const fourthlinks = [
+  { name: "Account Settings", href: "/account-settings", icon: SettingsIcon },
+  { name: "Log Out", href: "/log-out", icon: LogoutsIcon },
 ]
 
 interface LinksProps {
@@ -46,7 +54,7 @@ export function Links() {
   }
 
   return (
-    <div className="flex  flex-col border-black">
+    <div className="flex  flex-col border-black pb-5">
       {links.map((link) => {
         const LinkIcon = link.icon
         const isActive = pathname.startsWith(link.href)
@@ -78,7 +86,7 @@ export function Links() {
 export function SecondLinks() {
   const pathname = usePathname()
   return (
-    <div className="flex  flex-col border-black lg:h-80">
+    <div className="flex  flex-col border-black pb-5">
       {secondlinks.map((link) => {
         const LinkIcon = link.icon
         const isActive = pathname.startsWith(link.href)
@@ -92,13 +100,59 @@ export function SecondLinks() {
           >
             <div className="flex items-center gap-2 pl-2">
               <LinkIcon isActive={isActive} />
-              <p
-                className={clsx("text-sm font-semibold transition-opacity duration-500", {
-                  "font-extrabold transition-opacity duration-500": isActive,
-                })}
-              >
-                {link.name}
-              </p>
+              <p className={clsx("clash-font text-base font-semibold transition-opacity duration-500")}>{link.name}</p>
+            </div>
+          </Link>
+        )
+      })}
+    </div>
+  )
+}
+
+export function Thirdinks() {
+  const pathname = usePathname()
+  return (
+    <div className="flex  flex-col border-black pb-5">
+      {thirdlinks.map((link) => {
+        const LinkIcon = link.icon
+        const isActive = pathname.startsWith(link.href)
+        return (
+          <Link
+            key={link.name}
+            href={link.href}
+            className={clsx("dashboard-style", {
+              "active-dashboard": isActive,
+            })}
+          >
+            <div className="flex items-center gap-2 pl-2">
+              <LinkIcon isActive={isActive} />
+              <p className={clsx("clash-font text-base font-semibold transition-opacity duration-500")}>{link.name}</p>
+            </div>
+          </Link>
+        )
+      })}
+    </div>
+  )
+}
+
+export function FourthLink() {
+  const pathname = usePathname()
+  return (
+    <div className="flex  flex-col border-black pb-5">
+      {fourthlinks.map((link) => {
+        const LinkIcon = link.icon
+        const isActive = pathname.startsWith(link.href)
+        return (
+          <Link
+            key={link.name}
+            href={link.href}
+            className={clsx("dashboard-style", {
+              "active-dashboard": isActive,
+            })}
+          >
+            <div className="flex items-center gap-2 pl-2">
+              <LinkIcon isActive={isActive} />
+              <p className={clsx("clash-font text-base font-semibold transition-opacity duration-500")}>{link.name}</p>
             </div>
           </Link>
         )

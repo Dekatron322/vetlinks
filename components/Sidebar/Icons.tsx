@@ -39,20 +39,22 @@ export const ChatIcon = ({ isActive }: { isActive: boolean }) => (
   <Image src={isActive ? "/AuthImages/Clock.svg" : "/AuthImages/Clock.svg"} alt="Utility" width={20} height={20} />
 )
 
-export const ServiceIcon = ({ isActive }: { isActive: boolean }) => (
-  <Image src={isActive ? "/Icons/Utility-active.svg" : "/Icons/Utility.svg"} alt="Utility" width={20} height={20} />
+export const CasesIcon = ({ isActive }: { isActive: boolean }) => (
+  <Image
+    src={isActive ? "/AuthImages/FolderOpen.svg" : "/AuthImages/FolderOpen.svg"}
+    alt="Utility"
+    width={20}
+    height={20}
+  />
 )
 
-export const SupportIcon = ({ isActive }: { isActive: boolean }) => (
-  <Image src={isActive ? "/Icons/Utility-active.svg" : "/Icons/Support.svg"} alt="Utility" width={20} height={20} />
-)
-
-export const AdminIcon = ({ isActive }: { isActive: boolean }) => (
-  <Image src={isActive ? "/Icons/Utility-active.svg" : "/Icons/Admin.svg"} alt="Utility" width={20} height={20} />
-)
-
-export const LogoutIcon = ({ isActive }: { isActive: boolean }) => (
-  <Image src={isActive ? "/Icons/Utility-active.svg" : "/Icons/Logout.svg"} alt="Utility" width={20} height={20} />
+export const SavedCasesIcon = ({ isActive }: { isActive: boolean }) => (
+  <Image
+    src={isActive ? "/AuthImages/FloppyDisk.svg" : "/AuthImages/FloppyDisk.svg"}
+    alt="Utility"
+    width={20}
+    height={20}
+  />
 )
 
 export const PropertyIcon = ({ isActive }: { isActive: boolean }) => (
@@ -64,6 +66,23 @@ export const PropertyIcon = ({ isActive }: { isActive: boolean }) => (
   />
 )
 
-export const VisitorIcon = ({ isActive }: { isActive: boolean }) => (
-  <Image src={isActive ? "/Icons/Visitor-active.svg" : "/Icons/Visitor.svg"} alt="Utility" width={20} height={20} />
+export const GuidelineIcon = ({ isActive }: { isActive: boolean }) => (
+  <Image
+    src={isActive ? "/AuthImages/Question.svg" : "/AuthImages/Question.svg"}
+    alt="Utility"
+    width={20}
+    height={20}
+  />
+)
+
+export const SupportIcon = ({ isActive }: { isActive: boolean }) => (
+  <Image src={isActive ? "/AuthImages/Headset.svg" : "/AuthImages/Headset.svg"} alt="Utility" width={20} height={20} />
+)
+
+export const SettingsIcon = ({ isActive }: { isActive: boolean }) => (
+  <Image src={isActive ? "/AuthImages/Gear.svg" : "/AuthImages/Gear.svg"} alt="Utility" width={20} height={20} />
+)
+
+export const LogoutsIcon = ({ isActive }: { isActive: boolean }) => (
+  <Image src={isActive ? "/AuthImages/SignOut.svg" : "/AuthImages/SignOut.svg"} alt="Utility" width={20} height={20} />
 )

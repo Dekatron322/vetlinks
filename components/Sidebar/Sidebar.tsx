@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import React, { useState } from "react"
-import { Links, SecondLinks } from "./Links"
+import { FourthLink, Links, SecondLinks, Thirdinks } from "./Links"
 import { CollapsedLogoIcon, LogoIcon } from "./Icons"
 
 import clsx from "clsx"
@@ -28,6 +28,12 @@ const SideBar = () => {
           <Links />
           <p className="clash-font pl-2">Manage Cases</p>
           <SecondLinks />
+
+          <p className="clash-font pl-2">Support</p>
+          <Thirdinks />
+
+          <p className="clash-font pl-2">Account</p>
+          <FourthLink />
         </div>
       </div>
     </div>
