@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import Image from "next/image"
 import React from "react"
 import { RiArrowDropRightLine } from "react-icons/ri"
@@ -6,7 +7,12 @@ import { Trending } from "utils"
 const Dashboard = () => {
   return (
     <section>
-      <div className="px-16 py-7 max-sm:px-3">
+      <motion.div
+        className="px-16 py-7 max-sm:px-3"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeOut", duration: 1 }}
+      >
         <div className="flex items-center gap-1">
           <p className="clash-font text-sm text-[#00000080] ">Explore </p>
           <p>
@@ -52,12 +58,18 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="w-full border-b"></div>
 
       <div className="grid grid-cols-4 gap-5 px-16 py-7 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:px-3">
         {Trending.map((item, trend) => (
-          <div className="h-auto w-full rounded-lg bg-white" key={item.id}>
+          <motion.div
+            className="h-auto w-full rounded-lg bg-white"
+            key={item.id}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
             <div className="flex items-center justify-between px-4 py-2">
               <div className="flex items-center gap-2">
                 <Image src="/DashboardImages/ic_round-account-circle.svg" width={32} height={32} alt="" />
@@ -93,7 +105,7 @@ const Dashboard = () => {
                 <p className="text-sm text-[#8E8E93]">{item.bookmarks}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -5,6 +5,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { RxCross2 } from "react-icons/rx"
 import { Skeleton } from "@mui/material"
 import { usePathname } from "next/navigation"
+import { motion } from "framer-motion"
 
 const DashboardNav = () => {
   const pathname = usePathname()
@@ -67,7 +68,12 @@ const DashboardNav = () => {
 
   return (
     <>
-      <nav className="body hidden border-b px-16 py-4 md:block">
+      <motion.nav
+        className="body hidden border-b px-16 py-4 md:block"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeOut", duration: 1 }}
+      >
         <div className="flexBetween">
           <div className="flex content-center gap-32">
             <div className="content-center">
@@ -99,7 +105,7 @@ const DashboardNav = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </motion.nav>
       <nav className="block border-b  px-16 py-4 max-md:px-3 md:hidden">
         <div className="flex items-center justify-between">
           <Link href="/" className="content-center">
