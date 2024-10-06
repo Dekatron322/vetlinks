@@ -33,6 +33,7 @@ module.exports = {
       fontFamily: {
         body: [
           "lufga",
+          "Lato",
           "gilroy",
           "Inter",
           "ui-sans-serif",
@@ -53,6 +54,7 @@ module.exports = {
         ],
         sans: [
           "lufga",
+          "Lato",
           "gilroy",
           "Inter",
           "ui-sans-serif",

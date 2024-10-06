@@ -18,7 +18,7 @@ import {
 import { LogoIcon } from "components/Icons/Icons"
 
 const links = [
-  { name: "Cases", href: "/cases", icon: DashboardIcon },
+  { name: "Cases", href: "/dashboard", icon: DashboardIcon },
   { name: "Doctors", href: "/doctors", icon: EstatesIcon },
   { name: "Upload Cases", href: "/upload-cases", icon: HomeIcon },
   { name: "Recently Viewed", href: "/recently-viewed", icon: ChatIcon },
@@ -37,7 +37,7 @@ interface LinksProps {
   isCollapsed: boolean
 }
 
-export function Links({ isCollapsed }: LinksProps) {
+export function Links() {
   const pathname = usePathname()
   const [expandedLink, setExpandedLink] = useState<string | null>(null)
 
@@ -55,19 +55,14 @@ export function Links({ isCollapsed }: LinksProps) {
         return (
           <div key={link.name}>
             <div
-              className={clsx("dashboard-style cursor-pointer", {
-                "active-dashboard": isActive,
+              className={clsx("dashboard-style cursor-pointer ", {
+                "active-dashboard bg-[#F1F1F1]": isActive,
               })}
             >
               <Link href={link.href}>
-                <div className="flex items-center gap-2 pl-5">
+                <div className="flex items-center gap-2 pl-2">
                   <LinkIcon isActive={isActive} />
-                  <p
-                    className={clsx("text-sm font-semibold transition-opacity duration-500", {
-                      hidden: isCollapsed,
-                      "font-extrabold transition-opacity duration-500": isActive,
-                    })}
-                  >
+                  <p className={clsx("clash-font text-base font-semibold transition-opacity duration-500")}>
                     {link.name}
                   </p>
                 </div>
@@ -80,7 +75,7 @@ export function Links({ isCollapsed }: LinksProps) {
   )
 }
 
-export function SecondLinks({ isCollapsed }: LinksProps) {
+export function SecondLinks() {
   const pathname = usePathname()
   return (
     <div className="flex  flex-col border-black lg:h-80">
@@ -95,11 +90,10 @@ export function SecondLinks({ isCollapsed }: LinksProps) {
               "active-dashboard": isActive,
             })}
           >
-            <div className="flex items-center gap-2 pl-5">
+            <div className="flex items-center gap-2 pl-2">
               <LinkIcon isActive={isActive} />
               <p
                 className={clsx("text-sm font-semibold transition-opacity duration-500", {
-                  hidden: isCollapsed,
                   "font-extrabold transition-opacity duration-500": isActive,
                 })}
               >

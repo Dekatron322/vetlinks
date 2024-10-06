@@ -123,6 +123,7 @@ body {
   transition: width 0.3s;
   background-color: #ffffff;
   height: auto;
+  width: 316px;
   min-height: 100vh;
 }
 
@@ -138,11 +139,11 @@ body {
 }
 
 .dashboard-style {
-  @apply flex items-center  whitespace-nowrap border-0 border-black px-2  py-4 text-[#D0D1DB]  transition duration-300 hover:text-[#eec202] max-md:my-2 max-md:h-11 max-md:items-center max-sm:grow lg:justify-normal lg:space-x-2;
+  @apply flex items-center  whitespace-nowrap border-0 border-black   py-4 text-[#000000]  transition duration-300 hover:bg-[#F1F1F1] max-md:my-2 max-md:h-11 max-md:items-center max-sm:grow lg:justify-normal lg:space-x-2;
 }
 
 .active-dashboard {
-  @apply font-extrabold max-md:my-2 max-md:rounded-md max-md:text-[#eec202] lg:border-r-2 lg:border-[#eec202] lg:bg-inherit lg:text-[#eec202];
+  @apply bg-[#F1F1F1] font-extrabold max-md:my-2 max-md:rounded-md max-md:text-[#000000]   lg:text-[#000000];
 }
 
 .tab-bg {
@@ -371,7 +372,7 @@ body {
 }
 
 .clash-font {
-  font-family: "Clash Display", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .arrow {
