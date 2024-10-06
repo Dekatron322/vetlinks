@@ -78,9 +78,9 @@ const Dashboard = () => {
                   <p className="text-xs text-[#8E8E93]">{item.location}</p>
                 </div>
               </div>
-              <div className="flex gap-1">
+              <div className="flex gap-4">
                 <Image src="/DashboardImages/la.svg" width={36} height={32} alt="" />
-                <Image src="/DashboardImages/DotsThreeVertical.svg" width={36} height={32} alt="" />
+                <Image src="/DashboardImages/dots.svg" width={5} height={32} alt="" />
               </div>
             </div>
             <div style={{ position: "relative", width: "100%", height: "161px" }}>
