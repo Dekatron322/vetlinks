@@ -16,14 +16,13 @@ import {
   SettingsIcon,
   SupportIcon,
 } from "./Icons"
-import { LogoIcon } from "components/Icons/Icons"
 
 const links = [
   { name: "Cases", href: "/dashboard", icon: DashboardIcon },
   { name: "Doctors", href: "/doctors", icon: EstatesIcon },
   { name: "Upload Cases", href: "/upload-cases", icon: HomeIcon },
   { name: "Recently Viewed", href: "/recently-viewed", icon: ChatIcon },
-  { name: "Notification", href: "/Notification", icon: PropertyIcon },
+  { name: "Notifications", href: "/notifications", icon: PropertyIcon },
 ]
 
 const secondlinks = [
@@ -32,8 +31,8 @@ const secondlinks = [
 ]
 
 const thirdlinks = [
-  { name: "Guidlines And Best Practices", href: "/guidlines", icon: GuidelineIcon },
-  { name: "Support And Help", href: "/saved-cases", icon: SupportIcon },
+  { name: "Guidlines And Best Practices", href: "/guidelines", icon: GuidelineIcon },
+  { name: "Support And Help", href: "/support", icon: SupportIcon },
 ]
 
 const fourthlinks = [

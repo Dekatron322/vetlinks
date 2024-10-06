@@ -6,7 +6,7 @@ import { Trending } from "utils"
 const Dashboard = () => {
   return (
     <section>
-      <div className="px-16 py-7">
+      <div className="px-16 py-7 max-sm:px-3">
         <div className="flex items-center gap-1">
           <p className="clash-font text-sm text-[#00000080] ">Explore </p>
           <p>
@@ -17,6 +17,17 @@ const Dashboard = () => {
         <p className="clash-font text-lg font-black text-black">Trending Cases</p>
 
         <div>
+          <div className="mt-2 flex w-full md:hidden">
+            <div className="flex w-full items-center gap-2 rounded-s-md border  px-2">
+              <Image src="/DashboardImages/MagnifyingGlass.svg" width={20} height={20} alt="" />
+
+              <p className="text-sm text-[#4F4F4F]">Search</p>
+            </div>
+            <div className="flex w-full cursor-pointer justify-between gap-2 rounded-r-md border p-2">
+              <p className="text-sm text-[#4F4F4F]">All Categories</p>
+              <Image src="/DashboardImages/CaretDown.svg" width={18} height={18} alt="" />
+            </div>
+          </div>
           <div className="relative mt-5 flex gap-3 max-sm:hidden">
             <div className="flex ">
               <div className="flex w-[300px] items-center gap-2 rounded-s-md border bg-white px-2">
@@ -44,7 +55,7 @@ const Dashboard = () => {
       </div>
       <div className="w-full border-b"></div>
 
-      <div className="grid grid-cols-4 gap-5 px-16 py-7">
+      <div className="grid grid-cols-4 gap-5 px-16 py-7 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:px-3">
         {Trending.map((item, trend) => (
           <div className="h-auto w-full rounded-lg bg-white" key={item.id}>
             <div className="flex items-center justify-between px-4 py-2">
