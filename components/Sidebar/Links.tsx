@@ -27,7 +27,7 @@ const links = [
 
 const secondlinks = [
   { name: "My Cases", href: "/my-cases", icon: CasesIcon },
-  { name: "Saved Cases", href: "/saved-cases", icon: SavedCasesIcon },
+  { name: "Saved Cases", href: "/bookmarked-cases", icon: SavedCasesIcon },
 ]
 
 const thirdlinks = [
