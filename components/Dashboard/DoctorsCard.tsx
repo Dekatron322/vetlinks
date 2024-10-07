@@ -2,9 +2,9 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import React from "react"
 import { RiArrowDropRightLine } from "react-icons/ri"
-import { Trending } from "utils"
+import { Doctors, Trending } from "utils"
 
-const Dashboard = () => {
+const DoctorsCard = () => {
   return (
     <section>
       <motion.div
@@ -70,49 +70,30 @@ const Dashboard = () => {
       </motion.div>
       <div className="w-full border-b"></div>
 
-      <div className="grid grid-cols-4 gap-5 px-16 py-7 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:px-3">
-        {Trending.map((item, trend) => (
+      <div className="grid grid-cols-8 gap-3 px-16 py-7 max-md:grid-cols-2 max-sm:grid-cols-2 max-sm:px-3">
+        {Doctors.map((item, trend) => (
           <motion.div
-            className="h-auto w-full rounded-lg bg-white"
+            className="h-auto w-full rounded-md bg-white"
             key={item.id}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
-            <div className="flex items-center justify-between px-4 py-2">
-              <div className="flex items-center gap-2">
-                <Image src="/DashboardImages/ic_round-account-circle.svg" width={32} height={32} alt="" />
-                <div>
-                  <p className="clash-font text-[#333333]">{item.user}</p>
-                  <p className="text-xs text-[#8E8E93]">{item.location}</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <Image src="/DashboardImages/la.svg" width={36} height={32} alt="" />
-                <Image src="/DashboardImages/dots.svg" width={5} height={32} alt="" />
-              </div>
+            <div className="flex flex-col items-center justify-center py-4">
+              <Image src={item.image} width={80} height={80} alt="" />
+              <p className="clash-font py-1 text-center text-base font-medium text-[#333333]">{item.name}</p>
+              <p className="clash-font pb-2 text-center text-[9px] font-medium text-[#8E8E93]">{item.location}</p>
+              <Image src="/DashboardImages/la.svg" width={31} height={32} alt="" />
             </div>
-            <div style={{ position: "relative", width: "100%", height: "161px" }}>
-              <Image src={item.image} alt="" layout="fill" objectFit="cover" />
-            </div>
-            <p className="clash-font px-4 py-3 text-base font-medium text-[#333333]">{item.case}</p>
-            <div className=" w-full border-b"></div>
-            <p className="clash-font px-4 py-3 text-xs font-medium text-[#8E8E93]">{item.date}</p>
-            <div className=" w-full border-b"></div>
 
-            <div className="flex items-center justify-between px-4 py-2">
+            <div className=" w-full border-b"></div>
+            <div className="flex justify-between px-2 py-3">
               <div className="flex items-center gap-1">
-                <Image src="/DashboardImages/ShareFat.svg" width={24} height={24} alt="" />
-                <p className="text-sm text-[#8E8E93]">{item.shares}</p>
+                <Image src="/DashboardImages/FileText.svg" width={17.4} height={17.4} alt="" />
+                <p className="clash-font  text-center text-sm font-medium text-[#333333]">Cases</p>
+                <p className="clash-font  text-center text-sm text-[#333333]">{item.cases}</p>
               </div>
-              <div className="flex items-center gap-1">
-                <Image src="/DashboardImages/ChatCircleText.svg" width={24} height={24} alt="" />
-                <p className="text-sm text-[#8E8E93]">{item.comments}</p>
-              </div>
-              <div className="flex items-center gap-1">
-                <Image src="/DashboardImages/BookmarkSimple.svg" width={24} height={24} alt="" />
-                <p className="text-sm text-[#8E8E93]">{item.bookmarks}</p>
-              </div>
+              <Image src="/DashboardImages/ArrowUpRight.svg" width={12} height={12} alt="" />
             </div>
           </motion.div>
         ))}
@@ -121,4 +102,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default DoctorsCard

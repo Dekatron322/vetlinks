@@ -2,7 +2,7 @@ import SideBar from "components/Sidebar/Sidebar"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Cases | Vetlinks",
+  title: "Doctors | Vetlinks",
   description: "We are a family with a major focus in both primary and secondary healthcare service.",
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default function DoctorsLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex h-screen w-screen flex-col-reverse border-0 border-blue-700 lg:flex-row">
       <div className="">
