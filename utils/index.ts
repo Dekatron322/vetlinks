@@ -724,6 +724,53 @@ export const Trending = [
   },
 ]
 
+export const Recent = [
+  {
+    id: 1,
+    user: "Dr. Ahmad Habib",
+    location: "Zaria, Kaduna, Nigeria",
+    image: "/Dashboardimages/cow.svg",
+    case: "Coccidiosis in a 4 years old Bunaji Cattle.",
+    date: "Date: 26 August, 2024 9:30am",
+    shares: "290",
+    comments: "250",
+    bookmarks: "290",
+  },
+  {
+    id: 2,
+    user: "Dr. Ahmad Habib",
+    location: "Zaria, Kaduna, Nigeria",
+    image: "/Dashboardimages/case2.svg",
+    case: "Coccidiosis in a 4 years old Bunaji Cattle.",
+    date: "Date: 26 August, 2024 9:30am",
+    shares: "290",
+    comments: "250",
+    bookmarks: "290",
+  },
+  {
+    id: 3,
+    user: "Dr. Ahmad Habib",
+    location: "Zaria, Kaduna, Nigeria",
+    image: "/Dashboardimages/case3.svg",
+    case: "Coccidiosis in a 4 years old Bunaji Cattle.",
+    date: "Date: 26 August, 2024 9:30am",
+    shares: "290",
+    comments: "250",
+    bookmarks: "290",
+  },
+  {
+    id: 4,
+    user: "Dr. Ahmad Habib",
+    location: "Zaria, Kaduna, Nigeria",
+    image: "/Dashboardimages/case4.svg",
+    case: "Coccidiosis in a 4 years old Bunaji Cattle.",
+    date: "Date: 26 August, 2024 9:30am",
+    shares: "290",
+    comments: "250",
+    bookmarks: "290",
+  },
+]
+
 export const Doctors = [
   {
     id: 1,
