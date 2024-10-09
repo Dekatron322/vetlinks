@@ -1,10 +1,15 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import React from "react"
 import { RiArrowDropRightLine } from "react-icons/ri"
 import { Trending } from "utils"
 
 const Dashboard = () => {
+  const router = useRouter()
+  const CaseClick = () => {
+    router.push("/dashboard/cases-details")
+  }
   return (
     <section>
       <motion.div
@@ -95,7 +100,10 @@ const Dashboard = () => {
             <div style={{ position: "relative", width: "100%", height: "161px" }}>
               <Image src={item.image} alt="" layout="fill" objectFit="cover" />
             </div>
-            <p className="clash-font cursor-pointer px-4 py-3 text-base font-medium text-[#333333] transition-opacity duration-300 hover:opacity-80">
+            <p
+              onClick={CaseClick}
+              className="clash-font cursor-pointer px-4 py-3 text-base font-medium text-[#333333] transition-opacity duration-300 hover:opacity-80"
+            >
               {item.case}
             </p>
             <div className=" w-full border-b"></div>
