@@ -95,7 +95,9 @@ const Dashboard = () => {
             <div style={{ position: "relative", width: "100%", height: "161px" }}>
               <Image src={item.image} alt="" layout="fill" objectFit="cover" />
             </div>
-            <p className="clash-font px-4 py-3 text-base font-medium text-[#333333]">{item.case}</p>
+            <p className="clash-font cursor-pointer px-4 py-3 text-base font-medium text-[#333333] transition-opacity duration-300 hover:opacity-80">
+              {item.case}
+            </p>
             <div className=" w-full border-b"></div>
             <p className="clash-font px-4 py-3 text-xs font-medium text-[#8E8E93]">{item.date}</p>
             <div className=" w-full border-b"></div>
