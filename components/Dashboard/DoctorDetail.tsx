@@ -1,15 +1,10 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
 import React from "react"
 import { RiArrowDropRightLine } from "react-icons/ri"
-import { Doctors, Trending } from "utils"
+import { Trending } from "utils"
 
-const DoctorsCard = () => {
-  const router = useRouter()
-  const DoctorClick = () => {
-    router.push("/doctors/doctor-detail")
-  }
+const DoctorDetail = () => {
   return (
     <section>
       <motion.div
@@ -18,16 +13,16 @@ const DoctorsCard = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeOut", duration: 1 }}
       >
-        <div className="flex items-center gap-1">
-          <p className="clash-font text-sm text-[#00000080] ">Explore </p>
-          <p>
-            <RiArrowDropRightLine />
-          </p>
-          <p className="clash-font text-sm text-[#00000080] ">Cases</p>
-        </div>
-        <p className="clash-font text-lg font-black text-black">Trending Cases</p>
-
         <div>
+          <div className="flex items-center gap-3">
+            <Image src="/Dashboardimages/CaretLeft.svg" width={24} height={24} alt="" />
+            <Image src="/Dashboardimages/Avatar.svg" width={80} height={80} alt="" />
+            <div>
+              <p className="clash-font text-sm font-medium text-[#333333]">DR. Theophilus Sani</p>
+              <p className="clash-font font-regular py-2 text-xs text-[#4F4F4F]">Ahmadu Bello University</p>
+              <Image src="/Dashboardimages/la.svg" width={31.4} height={16.53} alt="" />
+            </div>
+          </div>
           <div className="mt-2 flex w-full md:hidden">
             <div className="flex w-full items-center gap-2 rounded-s-md border  px-2">
               <Image src="/DashboardImages/MagnifyingGlass.svg" width={20} height={20} alt="" />
@@ -61,44 +56,54 @@ const DoctorsCard = () => {
                 <Image src="/DashboardImages/CaretDown.svg" width={18} height={18} alt="" />
               </div>
             </div>
-
-            <div className="flex ">
-              <div className="flex items-center gap-2 rounded-s-md border bg-white px-3">
-                <p className="text-sm text-[#4F4F4F]">Date Joined</p>
-              </div>
-              <div className="flex cursor-pointer items-center gap-2 rounded-r-md border bg-[#ffffff] px-3">
-                <Image src="/DashboardImages/Date.svg" width={18} height={18} alt="" />
-              </div>
-            </div>
           </div>
         </div>
       </motion.div>
       <div className="w-full border-b"></div>
 
-      <div className="grid grid-cols-8 gap-3 px-16 py-7 max-md:grid-cols-2 max-sm:grid-cols-2 max-sm:px-3">
-        {Doctors.map((item, trend) => (
+      <div className="grid grid-cols-4 gap-5 px-16 py-7 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:px-3">
+        {Trending.map((item, trend) => (
           <motion.div
-            className="h-auto w-full rounded-md bg-white"
+            className="h-auto w-full rounded-lg bg-white"
             key={item.id}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
-            <div className="flex flex-col items-center justify-center py-4">
-              <Image src={item.image} width={80} height={80} alt="" />
-              <p className="clash-font py-1 text-center text-base font-medium text-[#333333]">{item.name}</p>
-              <p className="clash-font pb-2 text-center text-[9px] font-medium text-[#8E8E93]">{item.location}</p>
-              <Image src="/DashboardImages/la.svg" width={31} height={32} alt="" />
-            </div>
-
-            <div className=" w-full border-b"></div>
-            <div className="flex justify-between px-2 py-3">
-              <div className="flex items-center gap-1">
-                <Image src="/DashboardImages/FileText.svg" width={17.4} height={17.4} alt="" />
-                <p className="clash-font  text-center text-sm font-medium text-[#333333]">Cases</p>
-                <p className="clash-font  text-center text-sm text-[#333333]">{item.cases}</p>
+            <div className="flex items-center justify-between px-4 py-2">
+              <div className="flex items-center gap-2">
+                <Image src="/DashboardImages/ic_round-account-circle.svg" width={32} height={32} alt="" />
+                <div>
+                  <p className="clash-font text-[#333333]">{item.user}</p>
+                  <p className="text-xs text-[#8E8E93]">{item.location}</p>
+                </div>
               </div>
-              <Image src="/DashboardImages/ArrowUpRight.svg" width={12} height={12} alt="" onClick={DoctorClick} />
+              <div className="flex gap-4">
+                <Image src="/DashboardImages/la.svg" width={36} height={32} alt="" />
+                <Image src="/DashboardImages/dots.svg" width={5} height={32} alt="" />
+              </div>
+            </div>
+            <div style={{ position: "relative", width: "100%", height: "161px" }}>
+              <Image src={item.image} alt="" layout="fill" objectFit="cover" />
+            </div>
+            <p className="clash-font px-4 py-3 text-base font-medium text-[#333333]">{item.case}</p>
+            <div className=" w-full border-b"></div>
+            <p className="clash-font px-4 py-3 text-xs font-medium text-[#8E8E93]">{item.date}</p>
+            <div className=" w-full border-b"></div>
+
+            <div className="flex items-center justify-between px-4 py-2">
+              <div className="flex items-center gap-1">
+                <Image src="/DashboardImages/ShareFat.svg" width={24} height={24} alt="" />
+                <p className="text-sm text-[#8E8E93]">{item.shares}</p>
+              </div>
+              <div className="flex items-center gap-1">
+                <Image src="/DashboardImages/ChatCircleText.svg" width={24} height={24} alt="" />
+                <p className="text-sm text-[#8E8E93]">{item.comments}</p>
+              </div>
+              <div className="flex items-center gap-1">
+                <Image src="/DashboardImages/BookmarkSimple.svg" width={24} height={24} alt="" />
+                <p className="text-sm text-[#8E8E93]">{item.bookmarks}</p>
+              </div>
             </div>
           </motion.div>
         ))}
@@ -107,4 +112,4 @@ const DoctorsCard = () => {
   )
 }
 
-export default DoctorsCard
+export default DoctorDetail
