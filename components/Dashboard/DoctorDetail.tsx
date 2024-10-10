@@ -1,10 +1,16 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import React from "react"
-import { RiArrowDropRightLine } from "react-icons/ri"
+
 import { Trending } from "utils"
 
 const DoctorDetail = () => {
+  const router = useRouter()
+
+  const handleGoBack = () => {
+    router.back()
+  }
   return (
     <section>
       <motion.div
@@ -15,7 +21,14 @@ const DoctorDetail = () => {
       >
         <div>
           <div className="flex items-center gap-3">
-            <Image src="/Dashboardimages/CaretLeft.svg" width={24} height={24} alt="" />
+            <Image
+              onClick={handleGoBack}
+              src="/Dashboardimages/CaretLeft.svg"
+              width={24}
+              height={24}
+              alt=""
+              className="cursor-pointer"
+            />
             <Image src="/Dashboardimages/Avatar.svg" width={80} height={80} alt="" />
             <div>
               <p className="clash-font text-sm font-medium text-[#333333]">DR. Theophilus Sani</p>
