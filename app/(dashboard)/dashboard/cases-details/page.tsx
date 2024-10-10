@@ -9,7 +9,7 @@ export default function Dashboard() {
     <section className="  w-full">
       <div className="flex  w-full">
         <div className="flex  w-full flex-col">
-          {/* <DashboardNav /> */}
+          <DashboardNav />
           <div className="flex ">
             <div className="flex w-full   max-md:flex-col  max-md:px-0 ">
               <div className="w-full">

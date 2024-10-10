@@ -78,9 +78,9 @@ const CasesDetails = () => {
       </motion.div>
       <div className="w-full border-b"></div>
 
-      <div className="flex w-full  gap-5 px-16   max-sm:grid-cols-1 max-sm:px-3">
+      <div className="w-full gap-5  px-16 max-sm:grid-cols-1   max-sm:px-3 md:flex">
         <motion.div
-          className="my-5 h-auto w-[60%]"
+          className="my-5 h-auto md:w-[60%]"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 1 }}
@@ -101,11 +101,11 @@ const CasesDetails = () => {
           <p className="clash-font  font-regular  text-base text-[#00000080]">
             CLINICIAN: <span className="text-black">DR jOHN DOE</span>
           </p>
-          <div className="flex gap-4 py-3">
+          <div className="gap-4 py-3 md:flex">
             <p className="clash-font  font-regular  text-base text-[#00000080]">
               CATEGORY: <span className="text-black">LARGE ANIMAL</span>
             </p>
-            <p className="clash-font  font-regular  text-base text-[#00000080]">
+            <p className="clash-font font-regular text-base  text-[#00000080] max-sm:my-3">
               BREED: <span className="text-black">NDAMA</span>
             </p>
             <p className="clash-font  font-regular  text-base text-[#00000080]">
@@ -126,7 +126,7 @@ const CasesDetails = () => {
           <div className="py-5">
             <p className="text-base text-[#000000]">CLINICAL EXAMINATION</p>
             <p className="py-3">Table: vital parameters of the patient</p>
-            <div className="flex w-[80%]  justify-between pt-3">
+            <div className="flex justify-between  pt-3 md:w-[80%]">
               <div className="">
                 <p className="pb-2">Parameter values.</p>
                 <p className="pb-2">Temperature (°c).</p>
@@ -149,7 +149,7 @@ const CasesDetails = () => {
           </div>
         </motion.div>
         <div className="border-l border-gray-300"></div>
-        <div className="my-5 w-[30%]">
+        <div className="my-5 md:w-[30%]">
           <div className="flex items-start gap-4">
             <Image src="/DashboardImages/Round.svg" width={45.43} height={45.43} alt="User Avatar" />
             <div>
