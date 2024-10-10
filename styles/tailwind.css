@@ -403,3 +403,7 @@ body {
     display: none;
   }
 }
+
+.input-field {
+  @apply flex h-12 w-full items-center rounded-lg border bg-white p-3 hover:border-[#1B5EED] focus:border-[#1B5EED] active:border-[#1B5EED];
+}

@@ -20,7 +20,7 @@ export default function Dashboard() {
                   className="mx-auto flex  justify-center bg-[#ffffff]  max-sm:w-[100%] xl:max-w-[600px]"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ ease: "easeOut", duration: 1 }}
+                  transition={{ ease: "easeOut", duration: 1.5 }}
                 >
                   <div className="w-full justify-center   ">
                     <div className="w-full border-b border-[#0000000D] max-md:hidden"></div>
