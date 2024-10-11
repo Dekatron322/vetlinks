@@ -4,10 +4,7 @@ import Link from "next/link"
 export const LogoIcon = () => (
   <section>
     <Link href="/" className="icon-style content-center">
-      <Image src="./Authimages/collapsed.svg" width={128} height={43} alt="dekalo" />
-    </Link>
-    <Link href="/" className="dark-icon-style content-center">
-      <Image src="./Authimages/collapsed.svg" width={128} height={43} alt="dekalo" />
+      <Image src="/Authimages/collapsed.svg" width={128} height={43} alt="dekalo" />
     </Link>
   </section>
 )
