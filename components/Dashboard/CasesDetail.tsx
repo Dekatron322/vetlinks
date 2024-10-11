@@ -28,13 +28,13 @@ const CasesDetails = () => {
           <div className="flex items-center gap-3">
             <Image
               onClick={handleGoBack}
-              src="./Dashboardimages/CaretLeft.svg"
+              src="/Dashboardimages/CaretLeft.svg"
               width={24}
               height={24}
               alt=""
               className="cursor-pointer"
             />
-            <Image src="./Dashboardimages/Avatar.svg" width={80} height={80} alt="" />
+            <Image src="/Dashboardimages/Avatar.svg" width={80} height={80} alt="" />
             <div>
               <p className="clash-font text-sm font-medium text-[#333333]">DR. Theophilus Sani</p>
               <p className="clash-font font-regular py-2 text-xs text-[#4F4F4F]">Ahmadu Bello University</p>
@@ -42,25 +42,25 @@ const CasesDetails = () => {
           </div>
           <div className="mt-2 flex w-full md:hidden">
             <div className="flex w-full items-center gap-2 rounded-s-md border  px-2">
-              <Image src="./Dashboardimages/MagnifyingGlass.svg" width={20} height={20} alt="" />
+              <Image src="/DashboardImages/MagnifyingGlass.svg" width={20} height={20} alt="" />
 
               <p className="text-sm text-[#4F4F4F]">Search</p>
             </div>
             <div className="flex w-full cursor-pointer justify-between gap-2 rounded-r-md border p-2">
               <p className="text-sm text-[#4F4F4F]">All Categories</p>
-              <Image src="./Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
+              <Image src="/DashboardImages/CaretDown.svg" width={18} height={18} alt="" />
             </div>
           </div>
           <div className="relative mt-5 flex gap-3 max-sm:hidden">
             <div className="flex ">
               <div className="flex w-[300px] items-center gap-2 rounded-s-md border bg-white px-2">
-                <Image src="./Dashboardimages/MagnifyingGlass.svg" width={20} height={20} alt="" />
+                <Image src="/DashboardImages/MagnifyingGlass.svg" width={20} height={20} alt="" />
 
                 <p className="text-sm text-[#4F4F4F]">Search</p>
               </div>
               <div className="flex cursor-pointer gap-2 rounded-r-md border bg-[#ffffff] p-2">
                 <p className="text-sm text-[#4F4F4F]">Filter</p>
-                <Image src="./Dashboardimages/FunnelSimple.svg" width={18} height={18} alt="" />
+                <Image src="/DashboardImages/FunnelSimple.svg" width={18} height={18} alt="" />
               </div>
             </div>
 
@@ -70,7 +70,7 @@ const CasesDetails = () => {
               </div>
               <div className="flex cursor-pointer items-center gap-2 rounded-r-md border bg-[#ffffff] px-3">
                 <p className="text-sm text-[#4F4F4F]">All Categories</p>
-                <Image src="./Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
+                <Image src="/DashboardImages/CaretDown.svg" width={18} height={18} alt="" />
               </div>
             </div>
           </div>
@@ -87,7 +87,7 @@ const CasesDetails = () => {
         >
           <div style={{ position: "relative", width: "100%", height: "400px", borderRadius: "8px" }}>
             <Image
-              src="./Dashboardimages/imgLarge.svg"
+              src="/DashboardImages/imgLarge.svg"
               alt=""
               layout="fill"
               objectFit="contain"
@@ -151,7 +151,7 @@ const CasesDetails = () => {
         <div className="border-l border-gray-300"></div>
         <div className="my-5 md:w-[30%]">
           <div className="flex items-start gap-4">
-            <Image src="./Dashboardimages/Round.svg" width={45.43} height={45.43} alt="User Avatar" />
+            <Image src="/DashboardImages/Round.svg" width={45.43} height={45.43} alt="User Avatar" />
             <div>
               <p className="clash-font text-base font-bold text-[#141619]">
                 Martha Craig <span className="#687684">·12h</span>
@@ -177,7 +177,7 @@ const CasesDetails = () => {
 
               <div className="flex items-center gap-5">
                 <div className="flex items-center gap-1">
-                  <Image src="./Dashboardimages/Comment.svg" width={12.39} height={11.99} alt="User Avatar" />
+                  <Image src="/DashboardImages/Comment.svg" width={12.39} height={11.99} alt="User Avatar" />
                   <p className="text-xs text-[#687684]">28</p>
                 </div>
 
@@ -187,7 +187,7 @@ const CasesDetails = () => {
           </div>
           <div className="my-5 w-full border-b"></div>
           <div className="flex items-start gap-4 pl-10">
-            <Image src="./Dashboardimages/Round.svg" width={45.43} height={45.43} alt="User Avatar" />
+            <Image src="/DashboardImages/Round.svg" width={45.43} height={45.43} alt="User Avatar" />
             <div>
               <p className="clash-font text-base font-bold text-[#141619]">
                 Martha Craig <span className="#687684">·12h</span>
@@ -202,7 +202,7 @@ const CasesDetails = () => {
           </div>
           <div className="my-5 ml-10 w-full border-b"></div>
           <div className="flex items-start gap-4 pl-10">
-            <Image src="./Dashboardimages/Round.svg" width={45.43} height={45.43} alt="User Avatar" />
+            <Image src="/DashboardImages/Round.svg" width={45.43} height={45.43} alt="User Avatar" />
             <div>
               <p className="clash-font text-base font-bold text-[#141619]">
                 Martha Craig <span className="#687684">·12h</span>
