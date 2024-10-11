@@ -3,19 +3,8 @@ import Link from "next/link"
 
 export const LogoIcon = () => (
   <section>
-    <Link href="/" className="icon-style content-center">
-      <Image src="/Authimages/collapsed.svg" width={128} height={43} alt="dekalo" />
-    </Link>
-  </section>
-)
-
-export const CollapsedLogoIcon = () => (
-  <section>
-    <Link href="/" className="icon-style content-center">
-      <Image src="./AuthImages/logoSmall.svg" width={40} height={43} alt="dekalo" />
-    </Link>
-    <Link href="/" className="dark-icon-style content-center">
-      <Image src="./AuthImages/logoSmall.svg" width={40} height={43} alt="dekalo" />
+    <Link href="/dashboard" className="icon-style content-center">
+      <Image src="./Authimages/collapsed.svg" width={128} height={43} alt="dekalox" />
     </Link>
   </section>
 )
