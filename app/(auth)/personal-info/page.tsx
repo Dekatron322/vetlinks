@@ -184,8 +184,8 @@ const Page: React.FC = () => {
                         <Image
                           className="dark-icon-style"
                           src="./dark_cancel.svg"
-                          width={16}
-                          height={16}
+                          width={17}
+                          height={17}
                           alt="cancel"
                         />
                       </button>
