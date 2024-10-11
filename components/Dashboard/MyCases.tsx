@@ -16,7 +16,7 @@ const MyCases = () => {
     router.push("/dashboard/cases-details")
   }
 
-  const filteredTrending = Trending.filter((item) => {
+  const filteredTrending = Recent.filter((item) => {
     const matchesSearch = item.case.toLowerCase().includes(searchQuery.toLowerCase())
     const matchesCategory = selectedCategory === "All Categories" || item.category === selectedCategory
     return matchesSearch && matchesCategory
@@ -98,22 +98,13 @@ const MyCases = () => {
                 <Image src="./DashboardImages/CaretDown.svg" width={18} height={18} alt="" />
               </div>
             </div>
-
-            <div className="flex ">
-              <div className="flex items-center gap-2 rounded-s-md border bg-white px-3">
-                <p className="text-sm text-[#4F4F4F]">Date Joined</p>
-              </div>
-              <div className="flex cursor-pointer items-center gap-2 rounded-r-md border bg-[#ffffff] px-3">
-                <Image src="./DashboardImages/Date.svg" width={18} height={18} alt="" />
-              </div>
-            </div>
           </div>
         </div>
       </motion.div>
       <div className="w-full border-b"></div>
 
       <div className="grid grid-cols-4 gap-5 px-16 py-7 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:px-3">
-        {Recent.map((item, trend) => (
+        {filteredTrending.map((item, trend) => (
           <motion.div
             className="z-0 h-auto w-full rounded-lg bg-white"
             key={item.id}

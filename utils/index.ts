@@ -752,6 +752,7 @@ export const Recent = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Large Animals",
   },
   {
     id: 2,
@@ -764,6 +765,7 @@ export const Recent = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Avian And Fish",
   },
   {
     id: 3,
@@ -776,6 +778,7 @@ export const Recent = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Avian And Fish",
   },
   {
     id: 4,
@@ -788,6 +791,7 @@ export const Recent = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Large Animals",
   },
 ]
 
