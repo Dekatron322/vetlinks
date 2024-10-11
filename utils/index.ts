@@ -644,6 +644,7 @@ export const Trending = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Large Animals",
   },
   {
     id: 2,
@@ -655,6 +656,7 @@ export const Trending = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Large Animals",
   },
   {
     id: 3,
@@ -666,6 +668,7 @@ export const Trending = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Large Animals",
   },
   {
     id: 4,
@@ -677,6 +680,7 @@ export const Trending = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Small Animals",
   },
   {
     id: 5,
@@ -688,6 +692,7 @@ export const Trending = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Small Animals",
   },
   {
     id: 6,
@@ -699,6 +704,7 @@ export const Trending = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Wild Life",
   },
   {
     id: 7,
@@ -710,6 +716,7 @@ export const Trending = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Wild Life",
   },
   {
     id: 8,
@@ -721,6 +728,7 @@ export const Trending = [
     shares: "290",
     comments: "250",
     bookmarks: "290",
+    category: "Avian And Fish",
   },
 ]
 

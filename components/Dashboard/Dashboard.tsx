@@ -1,15 +1,26 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import React from "react"
+import React, { useState } from "react"
 import { RiArrowDropRightLine } from "react-icons/ri"
 import { Trending } from "utils"
 
+const categories = ["All Categories", "Large Animals", "Small Animals", "Wild Life", "Avian And Fish"]
+
 const Dashboard = () => {
   const router = useRouter()
+  const [searchQuery, setSearchQuery] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("All Categories")
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const CaseClick = () => {
     router.push("/dashboard/cases-details")
   }
+
+  const filteredTrending = Trending.filter((item) => {
+    const matchesSearch = item.case.toLowerCase().includes(searchQuery.toLowerCase())
+    const matchesCategory = selectedCategory === "All Categories" || item.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
   return (
     <section>
       <motion.div
@@ -44,12 +55,38 @@ const Dashboard = () => {
               <div className="flex w-[300px] items-center gap-2 rounded-s-md border bg-white px-2">
                 <Image src="/DashboardImages/MagnifyingGlass.svg" width={20} height={20} alt="" />
 
-                <p className="text-sm text-[#4F4F4F]">Search</p>
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="Search"
+                  className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
+                  style={{ width: "100%", height: "24px" }}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
               </div>
-              <div className="flex cursor-pointer gap-2 rounded-r-md border bg-[#ffffff] p-2">
+              <div
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex cursor-pointer gap-2 rounded-r-md border bg-[#ffffff] p-2"
+              >
                 <p className="text-sm text-[#4F4F4F]">Filter</p>
                 <Image src="/DashboardImages/FunnelSimple.svg" width={18} height={18} alt="" />
               </div>
+              {isDropdownOpen && (
+                <div className="z-100 absolute left-0  top-12 w-[200px] rounded-md border bg-white shadow-md">
+                  {categories.map((category, index) => (
+                    <p
+                      key={index}
+                      className="cursor-pointer px-4 py-2 text-sm hover:bg-gray-100"
+                      onClick={() => {
+                        setSelectedCategory(category)
+                        setIsDropdownOpen(false)
+                      }}
+                    >
+                      {category}
+                    </p>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="flex ">
@@ -76,9 +113,9 @@ const Dashboard = () => {
       <div className="w-full border-b"></div>
 
       <div className="grid grid-cols-4 gap-5 px-16 py-7 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:px-3">
-        {Trending.map((item, trend) => (
+        {filteredTrending.map((item) => (
           <motion.div
-            className="h-auto w-full rounded-lg bg-white"
+            className="z-0 h-auto w-full rounded-lg bg-white"
             key={item.id}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
