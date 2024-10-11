@@ -28,13 +28,18 @@ const CasesDetails = () => {
           <div className="flex items-center gap-3">
             <Image
               onClick={handleGoBack}
-              src="/Dashboardimages/CaretLeft.svg"
+              src="https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/CaretLeft.svg"
               width={24}
               height={24}
               alt=""
               className="cursor-pointer"
             />
-            <Image src="/Dashboardimages/Avatar.svg" width={80} height={80} alt="" />
+            <Image
+              src="https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg"
+              width={80}
+              height={80}
+              alt=""
+            />
             <div>
               <p className="clash-font text-sm font-medium text-[#333333]">DR. Theophilus Sani</p>
               <p className="clash-font font-regular py-2 text-xs text-[#4F4F4F]">Ahmadu Bello University</p>

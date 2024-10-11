@@ -796,7 +796,8 @@ export const Doctors = [
     id: 1,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -804,7 +805,8 @@ export const Doctors = [
     id: 2,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -812,7 +814,8 @@ export const Doctors = [
     id: 3,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -820,7 +823,8 @@ export const Doctors = [
     id: 4,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -828,7 +832,8 @@ export const Doctors = [
     id: 5,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -836,7 +841,8 @@ export const Doctors = [
     id: 6,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -844,7 +850,8 @@ export const Doctors = [
     id: 7,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -852,7 +859,8 @@ export const Doctors = [
     id: 8,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -860,7 +868,8 @@ export const Doctors = [
     id: 9,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -868,7 +877,8 @@ export const Doctors = [
     id: 10,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -876,7 +886,8 @@ export const Doctors = [
     id: 11,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -884,7 +895,8 @@ export const Doctors = [
     id: 12,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -892,7 +904,8 @@ export const Doctors = [
     id: 13,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -900,7 +913,8 @@ export const Doctors = [
     id: 14,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -908,7 +922,8 @@ export const Doctors = [
     id: 15,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -916,7 +931,8 @@ export const Doctors = [
     id: 16,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -924,7 +940,8 @@ export const Doctors = [
     id: 17,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -932,7 +949,8 @@ export const Doctors = [
     id: 18,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -940,7 +958,8 @@ export const Doctors = [
     id: 19,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -948,7 +967,8 @@ export const Doctors = [
     id: 20,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -956,7 +976,8 @@ export const Doctors = [
     id: 21,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -964,7 +985,8 @@ export const Doctors = [
     id: 22,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -972,7 +994,8 @@ export const Doctors = [
     id: 23,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
@@ -980,7 +1003,8 @@ export const Doctors = [
     id: 24,
     name: "DR. Theophilus Sani",
     location: "Ahmadu Bello University",
-    image: "./Dashboardimages/Avatar.svg",
+    image:
+      "https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/Avatar.svg",
     cases: "230+",
     date: "Date: 26 August, 2024 9:30am",
   },
