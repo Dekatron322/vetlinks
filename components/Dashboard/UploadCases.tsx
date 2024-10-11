@@ -277,7 +277,12 @@ const UploadCases = () => {
               </div>
               <div className="flex  cursor-pointer items-center justify-between gap-2 rounded-r-md border bg-[#ffffff] px-3">
                 <p className="clash-font text-sm text-[#4F4F4F]">Microbilogy</p>
-                <Image src="./Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
+                <Image
+                  src="https://raw.githubusercontent.com/Dekatron322/vetlinks/81c86ade0ad897a2c063918fc20d3fc47af1eaa5/public/DashboardImages/CaretDown.svg"
+                  width={18}
+                  height={18}
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -304,7 +309,12 @@ const UploadCases = () => {
               </div>
               <div className="flex  cursor-pointer items-center justify-between gap-2 rounded-r-md border bg-[#ffffff] px-3">
                 <p className="clash-font text-sm text-[#4F4F4F]">Microbilogy</p>
-                <Image src="./Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
+                <Image
+                  src="https://raw.githubusercontent.com/Dekatron322/vetlinks/81c86ade0ad897a2c063918fc20d3fc47af1eaa5/public/DashboardImages/CaretDown.svg"
+                  width={18}
+                  height={18}
+                  alt=""
+                />
               </div>
             </div>
           </div>

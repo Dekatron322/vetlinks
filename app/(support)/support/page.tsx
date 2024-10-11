@@ -85,7 +85,7 @@ export default function Dashboard() {
                         <div className="my-5 flex w-full items-center justify-center gap-7">
                           <Link href="#">
                             <Image
-                              src="./Dashboardimages/WhatsappLogo.svg"
+                              src="https://raw.githubusercontent.com/Dekatron322/vetlinks/81c86ade0ad897a2c063918fc20d3fc47af1eaa5/public/DashboardImages/WhatsappLogo.svg"
                               width={32}
                               height={32}
                               alt="profile"
@@ -94,7 +94,7 @@ export default function Dashboard() {
                           </Link>
                           <Link href="#">
                             <Image
-                              src="./Dashboardimages/FacebookLogo.svg"
+                              src="https://raw.githubusercontent.com/Dekatron322/vetlinks/81c86ade0ad897a2c063918fc20d3fc47af1eaa5/public/DashboardImages/FacebookLogo.svg"
                               width={32}
                               height={32}
                               alt="profile"
@@ -103,7 +103,7 @@ export default function Dashboard() {
                           </Link>
                           <Link href="#">
                             <Image
-                              src="./Dashboardimages/InstagramLogo.svg"
+                              src="https://raw.githubusercontent.com/Dekatron322/vetlinks/81c86ade0ad897a2c063918fc20d3fc47af1eaa5/public/DashboardImages/InstagramLogo.svg"
                               width={32}
                               height={32}
                               alt="profile"
@@ -112,7 +112,7 @@ export default function Dashboard() {
                           </Link>
                           <Link href="#">
                             <Image
-                              src="./Dashboardimages/XLogo.svg"
+                              src="https://raw.githubusercontent.com/Dekatron322/vetlinks/81c86ade0ad897a2c063918fc20d3fc47af1eaa5/public/DashboardImages/XLogo.svg"
                               width={32}
                               height={32}
                               alt="profile"
@@ -121,7 +121,7 @@ export default function Dashboard() {
                           </Link>
                           <Link href="#">
                             <Image
-                              src="./Dashboardimages/LinkedinLogo.svg"
+                              src="https://raw.githubusercontent.com/Dekatron322/vetlinks/81c86ade0ad897a2c063918fc20d3fc47af1eaa5/public/DashboardImages/LinkedinLogo.svg"
                               width={32}
                               height={32}
                               alt="profile"
