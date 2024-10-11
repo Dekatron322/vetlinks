@@ -2,9 +2,9 @@
 import Link from "next/link"
 import React, { useState } from "react"
 import { FourthLink, Links, SecondLinks, Thirdinks } from "./Links"
-import { CollapsedLogoIcon, LogoIcon } from "./Icons"
 
 import clsx from "clsx"
+import { LogoIcon } from "./Icons"
 
 const SideBar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true)
