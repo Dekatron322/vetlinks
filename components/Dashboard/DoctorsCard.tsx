@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import React from "react"
+import React, { useState } from "react"
 import { RiArrowDropRightLine } from "react-icons/ri"
 import { Doctors, Trending } from "utils"
 
@@ -10,6 +10,21 @@ const DoctorsCard = () => {
   const DoctorClick = () => {
     router.push("/doctors/doctor-detail")
   }
+
+  const [searchQuery, setSearchQuery] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("All Categories")
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const CaseClick = () => {
+    router.push("/dashboard/cases-details")
+  }
+
+  const categories = ["All Categories", "Large Animals", "Small Animals", "Wild Life", "Avian And Fish"]
+
+  const filteredTrending = Trending.filter((item) => {
+    const matchesSearch = item.case.toLowerCase().includes(searchQuery.toLowerCase())
+    const matchesCategory = selectedCategory === "All Categories" || item.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
   return (
     <section>
       <motion.div
@@ -30,26 +45,52 @@ const DoctorsCard = () => {
         <div>
           <div className="mt-2 flex w-full md:hidden">
             <div className="flex w-full items-center gap-2 rounded-s-md border  px-2">
-              <Image src="/Dashboardimages/MagnifyingGlass.svg" width={20} height={20} alt="" />
+              <Image src="./DashboardImages/MagnifyingGlass.svg" width={20} height={20} alt="" />
 
               <p className="text-sm text-[#4F4F4F]">Search</p>
             </div>
             <div className="flex w-full cursor-pointer justify-between gap-2 rounded-r-md border p-2">
               <p className="text-sm text-[#4F4F4F]">All Categories</p>
-              <Image src="/Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
+              <Image src="./DashboardImages/CaretDown.svg" width={18} height={18} alt="" />
             </div>
           </div>
           <div className="relative mt-5 flex gap-3 max-sm:hidden">
             <div className="flex ">
               <div className="flex w-[300px] items-center gap-2 rounded-s-md border bg-white px-2">
-                <Image src="/Dashboardimages/MagnifyingGlass.svg" width={20} height={20} alt="" />
+                <Image src="./DashboardImages/MagnifyingGlass.svg" width={20} height={20} alt="" />
 
-                <p className="text-sm text-[#4F4F4F]">Search</p>
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="Search"
+                  className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
+                  style={{ width: "100%", height: "24px" }}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
               </div>
-              <div className="flex cursor-pointer gap-2 rounded-r-md border bg-[#ffffff] p-2">
+              <div
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex cursor-pointer gap-2 rounded-r-md border bg-[#ffffff] p-2"
+              >
                 <p className="text-sm text-[#4F4F4F]">Filter</p>
-                <Image src="/Dashboardimages/FunnelSimple.svg" width={18} height={18} alt="" />
+                <Image src="./DashboardImages/FunnelSimple.svg" width={18} height={18} alt="" />
               </div>
+              {isDropdownOpen && (
+                <div className="z-100 absolute left-0  top-12 w-[200px] rounded-md border bg-white shadow-md">
+                  {categories.map((category, index) => (
+                    <p
+                      key={index}
+                      className="cursor-pointer px-4 py-2 text-sm hover:bg-gray-100"
+                      onClick={() => {
+                        setSelectedCategory(category)
+                        setIsDropdownOpen(false)
+                      }}
+                    >
+                      {category}
+                    </p>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="flex ">
@@ -58,7 +99,7 @@ const DoctorsCard = () => {
               </div>
               <div className="flex cursor-pointer items-center gap-2 rounded-r-md border bg-[#ffffff] px-3">
                 <p className="text-sm text-[#4F4F4F]">All Categories</p>
-                <Image src="/Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
+                <Image src="./DashboardImages/CaretDown.svg" width={18} height={18} alt="" />
               </div>
             </div>
 
@@ -67,7 +108,7 @@ const DoctorsCard = () => {
                 <p className="text-sm text-[#4F4F4F]">Date Joined</p>
               </div>
               <div className="flex cursor-pointer items-center gap-2 rounded-r-md border bg-[#ffffff] px-3">
-                <Image src="/Dashboardimages/Date.svg" width={18} height={18} alt="" />
+                <Image src="./DashboardImages/Date.svg" width={18} height={18} alt="" />
               </div>
             </div>
           </div>
@@ -88,17 +129,17 @@ const DoctorsCard = () => {
               <Image src={item.image} width={80} height={80} alt="" />
               <p className="clash-font py-1 text-center text-base font-medium text-[#333333]">{item.name}</p>
               <p className="clash-font pb-2 text-center text-[9px] font-medium text-[#8E8E93]">{item.location}</p>
-              <Image src="/Dashboardimages/la.svg" width={31} height={32} alt="" />
+              <Image src="./DashboardImages/la.svg" width={31} height={32} alt="" />
             </div>
 
             <div className=" w-full border-b"></div>
             <div className="flex justify-between px-2 py-3">
               <div className="flex items-center gap-1">
-                <Image src="/Dashboardimages/FileText.svg" width={17.4} height={17.4} alt="" />
+                <Image src="./Dashboardimages/FileText.svg" width={17.4} height={17.4} alt="" />
                 <p className="clash-font  text-center text-sm font-medium text-[#333333]">Cases</p>
                 <p className="clash-font  text-center text-sm text-[#333333]">{item.cases}</p>
               </div>
-              <Image src="/Dashboardimages/ArrowUpRight.svg" width={12} height={12} alt="" onClick={DoctorClick} />
+              <Image src="./Dashboardimages/ArrowUpRight.svg" width={12} height={12} alt="" onClick={DoctorClick} />
             </div>
           </motion.div>
         ))}
