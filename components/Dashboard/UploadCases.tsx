@@ -80,7 +80,12 @@ const UploadCases = () => {
               </div>
               <div className="flex w-full cursor-pointer justify-between gap-2 rounded-r-md border p-2">
                 <p className="clash-font text-sm text-[#4F4F4F]">Categories</p>
-                <Image src="./Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
+                <Image
+                  src="https://raw.githubusercontent.com/Dekatron322/vetlinks/81c86ade0ad897a2c063918fc20d3fc47af1eaa5/public/DashboardImages/CaretDown.svg"
+                  width={18}
+                  height={18}
+                  alt=""
+                />
               </div>
             </div>
             <div className="relative my-5 flex gap-3 max-sm:hidden">
@@ -90,7 +95,12 @@ const UploadCases = () => {
                 </div>
                 <div className="flex w-[395px] cursor-pointer items-center justify-between gap-2 rounded-r-md border bg-[#ffffff] px-3">
                   <p className="clash-font text-sm text-[#4F4F4F]">Large Animal</p>
-                  <Image src="./Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
+                  <Image
+                    src="https://raw.githubusercontent.com/Dekatron322/vetlinks/81c86ade0ad897a2c063918fc20d3fc47af1eaa5/public/DashboardImages/CaretDown.svg"
+                    width={18}
+                    height={18}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -152,7 +162,7 @@ const UploadCases = () => {
                         {/* Make sure the trash icon is not inside the input field */}
                         <div onClick={() => handleDelete(index)}>
                           <Image
-                            src="./Dashboardimages/Trash.svg"
+                            src="https://raw.githubusercontent.com/Dekatron322/vetlinks/b721914799897ac7d91ebd4b67ca487169f1e95e/public/DashboardImages/Trash.svg"
                             width={24}
                             height={24}
                             alt="Delete"
