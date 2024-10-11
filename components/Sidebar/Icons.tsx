@@ -4,7 +4,12 @@ import Link from "next/link"
 export const LogoIcon = () => (
   <section>
     <Link href="/dashboard" className="icon-style content-center">
-      <Image src="Authimages/collapsed.svg" width={128} height={43} alt="dekalox" />
+      <Image
+        src="https://raw.githubusercontent.com/Dekatron322/vetlinks/10ab72d326aa0cfefd29c9f846e348ce19dd68ce/public/AuthImages/collapsed.svg"
+        width={128}
+        height={43}
+        alt="dekalox"
+      />
     </Link>
   </section>
 )
