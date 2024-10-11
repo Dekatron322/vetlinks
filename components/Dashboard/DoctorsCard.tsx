@@ -135,11 +135,23 @@ const DoctorsCard = () => {
             <div className=" w-full border-b"></div>
             <div className="flex justify-between px-2 py-3">
               <div className="flex items-center gap-1">
-                <Image src="./Dashboardimages/FileText.svg" width={17.4} height={17.4} alt="" />
+                <Image
+                  src="https://raw.githubusercontent.com/Dekatron322/vetlinks/6632ac7df178fd880c487f80b5d775d2c81efb88/public/DashboardImages/FileText.svg"
+                  width={17.4}
+                  height={17.4}
+                  alt=""
+                />
                 <p className="clash-font  text-center text-sm font-medium text-[#333333]">Cases</p>
                 <p className="clash-font  text-center text-sm text-[#333333]">{item.cases}</p>
               </div>
-              <Image src="./Dashboardimages/ArrowUpRight.svg" width={12} height={12} alt="" onClick={DoctorClick} />
+              <Image
+                className="cursor-pointer"
+                src="https://raw.githubusercontent.com/Dekatron322/vetlinks/6632ac7df178fd880c487f80b5d775d2c81efb88/public/DashboardImages/ArrowUpRight.svg"
+                width={12}
+                height={12}
+                alt=""
+                onClick={DoctorClick}
+              />
             </div>
           </motion.div>
         ))}
