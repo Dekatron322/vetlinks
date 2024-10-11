@@ -62,7 +62,7 @@ const UploadCases = () => {
           transition={{ ease: "easeOut", duration: 1 }}
         >
           <div>
-            <div className="items-center gap-3">
+            <div className="mb-3 items-center gap-3">
               <div className="flex items-center gap-1">
                 <p className="clash-font text-sm text-[#00000080] ">Explore </p>
                 <p>
@@ -72,22 +72,7 @@ const UploadCases = () => {
               </div>
               <p className="clash-font text-lg font-black text-black">Upload Cases</p>
             </div>
-            <div className="mt-2 flex w-full md:hidden">
-              <div className="flex w-full items-center gap-2 rounded-s-md border px-2">
-                <Image src="./Dashboardimages/MagnifyingGlass.svg" width={20} height={20} alt="" />
 
-                <p className="text-sm text-[#4F4F4F]">Search</p>
-              </div>
-              <div className="flex w-full cursor-pointer justify-between gap-2 rounded-r-md border p-2">
-                <p className="clash-font text-sm text-[#4F4F4F]">Categories</p>
-                <Image
-                  src="https://raw.githubusercontent.com/Dekatron322/vetlinks/81c86ade0ad897a2c063918fc20d3fc47af1eaa5/public/DashboardImages/CaretDown.svg"
-                  width={18}
-                  height={18}
-                  alt=""
-                />
-              </div>
-            </div>
             <div className="relative my-5 flex gap-3 max-sm:hidden">
               <div className="flex ">
                 <div className="clash-font flex items-center gap-2 rounded-s-md border bg-white px-3 py-2">
@@ -128,7 +113,7 @@ const UploadCases = () => {
             </div>
             <div>
               <div
-                className="-z-10 my-3 w-[395px] cursor-pointer gap-2 rounded-md border bg-[#ffffff] px-3 py-3"
+                className="-z-10 my-3 cursor-pointer gap-2 rounded-md border bg-[#ffffff] px-3 py-3 md:w-[395px]"
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
               >
@@ -269,18 +254,18 @@ const UploadCases = () => {
         transition={{ ease: "easeOut", duration: 1 }}
       >
         <p className="clash-font text-xl font-black text-black">Lab Result</p>
-        <div className="flex items-center gap-1">
+        <div className="mb-3 flex items-center gap-1">
           <p className="clash-font text-sm text-[#00000080] ">Select From Specific Lab and Fill in the results</p>
         </div>
       </motion.div>
       <motion.div
-        className="flex w-full gap-4 pb-5 max-md:px-3 md:px-16"
+        className="w-full gap-4 pb-5  max-md:px-3 md:flex md:px-16"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeOut", duration: 1 }}
       >
-        <div className="w-full">
-          <div className="relative my-5 flex gap-3 max-sm:hidden">
+        <div className="mb-3 w-full">
+          <div className="relative my-5  flex gap-3 ">
             <div className="flex ">
               <div className="clash-font flex items-center gap-2 rounded-s-md border bg-white px-3 py-2">
                 <p className="text-sm text-[#4F4F4F]">Laboratory</p>
@@ -312,7 +297,7 @@ const UploadCases = () => {
           </div>
         </div>
         <div className="w-full">
-          <div className="relative my-5 flex gap-3 max-sm:hidden">
+          <div className="relative my-5 flex gap-3 ">
             <div className="flex ">
               <div className="clash-font flex items-center gap-2 rounded-s-md border bg-white px-3 py-2">
                 <p className="text-sm text-[#4F4F4F]">Laboratory</p>
