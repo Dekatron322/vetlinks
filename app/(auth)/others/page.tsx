@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
-type Department = "Male" | "Female"
+type Gender = "Male" | "Female"
 
 const Page: React.FC = () => {
   const [username, setUsername] = useState("")
@@ -14,7 +14,7 @@ const Page: React.FC = () => {
   const [error, setError] = useState<string | null>(null)
   const [showSuccessNotification, setShowSuccessNotification] = useState(false)
   const [showErrorNotification, setShowErrorNotification] = useState(false)
-  const [searchTerm, setSearchTerm] = useState<Department | "">("")
+  const [searchTerm, setSearchTerm] = useState<Gender | "">("")
   const [showDropdown, setShowDropdown] = useState(false)
 
   const router = useRouter() // Initialize the router
@@ -41,11 +41,11 @@ const Page: React.FC = () => {
   }, [showSuccessNotification, showErrorNotification])
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value as Department | "")
+    setSearchTerm(event.target.value as Gender | "")
     setShowDropdown(true)
   }
 
-  const handleDropdownSelect = (department: Department) => {
+  const handleDropdownSelect = (department: Gender) => {
     setSearchTerm(department)
     setShowDropdown(false)
   }
@@ -54,7 +54,7 @@ const Page: React.FC = () => {
     setSearchTerm("")
     setShowDropdown(false)
   }
-  const departments: Department[] = ["Male", "Female"]
+  const departments: Gender[] = ["Male", "Female"]
 
   return (
     <>
