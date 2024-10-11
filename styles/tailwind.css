@@ -407,3 +407,7 @@ body {
 .input-field {
   @apply flex h-12 w-full items-center rounded-lg border bg-white p-3 hover:border-[#1B5EED] focus:border-[#1B5EED] active:border-[#1B5EED];
 }
+
+.auth-field {
+  @apply flex h-12 w-full items-center rounded-lg border bg-[#F1F1F1] p-3 hover:border-[#1B5EED] focus:border-[#FBFAFC] active:border-[#1B5EED];
+}

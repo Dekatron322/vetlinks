@@ -75,7 +75,7 @@ const Page: React.FC = () => {
             <div className="mt-5 flex w-full justify-center">
               <form>
                 <label className="text-xs">VCN Number</label>
-                <div className="search-bg mb-5 h-[48px]  items-center justify-between rounded-lg px-3 py-3  hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-md:w-[340px]  max-sm:mb-2 xl:w-[536x]">
+                <div className="search-bg  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
                   <div className="flex">
                     <input
                       type="text"

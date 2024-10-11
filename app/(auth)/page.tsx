@@ -145,13 +145,13 @@ const Page: React.FC = () => {
 
             <div className="my-4 justify-center gap-1 ">
               <div className="mt-5 flex w-full justify-center  gap-6 md:px-7">
-                <button
+                <Link
+                  href="/dashboard"
                   type="submit"
                   className="button-primary h-[42px] w-full rounded-lg max-md:w-[340px] max-sm:h-[42px]"
-                  disabled={loading}
                 >
-                  {loading ? "Signing In..." : "Proceed"}
-                </button>
+                  Proceed
+                </Link>
               </div>
               <div className="mt-6 w-full border-b border-[#0000000D] max-md:hidden"></div>
 
