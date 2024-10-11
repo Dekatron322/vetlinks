@@ -39,7 +39,7 @@ const Page: React.FC = () => {
           <div className="w-auto justify-center">
             <div className="flex items-center px-6 py-6 xl:min-w-[600px]">
               <Image
-                src="/AuthImages/CaretUp.svg"
+                src="./AuthImages/CaretUp.svg"
                 width={24}
                 height={24}
                 alt="profile"
@@ -48,7 +48,7 @@ const Page: React.FC = () => {
               />
               <div className="flex w-full items-center justify-center">
                 <Image
-                  src="/AuthImages/Create_Account.svg"
+                  src="./AuthImages/Create_Account.svg"
                   width={166}
                   height={24}
                   alt="profile"
@@ -67,7 +67,7 @@ const Page: React.FC = () => {
                 } cursor-pointer px-2`}
               >
                 <Image
-                  src={selectedOption === "doctor" ? "/AuthImages/Radio.svg" : "/AuthImages/RadioEmpty.svg"}
+                  src={selectedOption === "doctor" ? "./AuthImages/Radio.svg" : "./AuthImages/RadioEmpty.svg"}
                   width={24}
                   height={24}
                   alt="profile"
@@ -87,7 +87,7 @@ const Page: React.FC = () => {
                 } cursor-pointer px-2`}
               >
                 <Image
-                  src={selectedOption === "others" ? "/AuthImages/Radio.svg" : "/AuthImages/RadioEmpty.svg"}
+                  src={selectedOption === "others" ? "./AuthImages/Radio.svg" : "./AuthImages/RadioEmpty.svg"}
                   width={24}
                   height={24}
                   alt="profile"

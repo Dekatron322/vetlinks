@@ -45,8 +45,8 @@ const Search = () => {
         />
         {searchTerm && (
           <button className="focus:outline-none" onClick={handleCancelSearch}>
-            <Image className="icon-style" src="./cancel.svg" width={16} height={16} alt="cancel" />
-            <Image className="dark-icon-style" src="./dark_cancel.svg" width={16} height={16} alt="cancel" />
+            <Image className="icon-style" src="../cancel.svg" width={16} height={16} alt="cancel" />
+            <Image className="dark-icon-style" src="../dark_cancel.svg" width={16} height={16} alt="cancel" />
           </button>
         )}
       </div>

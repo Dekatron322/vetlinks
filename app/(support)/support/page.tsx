@@ -85,7 +85,7 @@ export default function Dashboard() {
                         <div className="my-5 flex w-full items-center justify-center gap-7">
                           <Link href="#">
                             <Image
-                              src="/DashboardImages/WhatsappLogo.svg"
+                              src="./Dashboardimages/WhatsappLogo.svg"
                               width={32}
                               height={32}
                               alt="profile"
@@ -94,7 +94,7 @@ export default function Dashboard() {
                           </Link>
                           <Link href="#">
                             <Image
-                              src="/DashboardImages/FacebookLogo.svg"
+                              src="./Dashboardimages/FacebookLogo.svg"
                               width={32}
                               height={32}
                               alt="profile"
@@ -103,7 +103,7 @@ export default function Dashboard() {
                           </Link>
                           <Link href="#">
                             <Image
-                              src="/DashboardImages/InstagramLogo.svg"
+                              src="./Dashboardimages/InstagramLogo.svg"
                               width={32}
                               height={32}
                               alt="profile"
@@ -112,7 +112,7 @@ export default function Dashboard() {
                           </Link>
                           <Link href="#">
                             <Image
-                              src="/DashboardImages/XLogo.svg"
+                              src="./Dashboardimages/XLogo.svg"
                               width={32}
                               height={32}
                               alt="profile"
@@ -121,7 +121,7 @@ export default function Dashboard() {
                           </Link>
                           <Link href="#">
                             <Image
-                              src="/DashboardImages/LinkedinLogo.svg"
+                              src="./Dashboardimages/LinkedinLogo.svg"
                               width={32}
                               height={32}
                               alt="profile"

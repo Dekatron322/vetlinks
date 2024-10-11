@@ -74,13 +74,13 @@ const UploadCases = () => {
             </div>
             <div className="mt-2 flex w-full md:hidden">
               <div className="flex w-full items-center gap-2 rounded-s-md border px-2">
-                <Image src="/DashboardImages/MagnifyingGlass.svg" width={20} height={20} alt="" />
+                <Image src="./Dashboardimages/MagnifyingGlass.svg" width={20} height={20} alt="" />
 
                 <p className="text-sm text-[#4F4F4F]">Search</p>
               </div>
               <div className="flex w-full cursor-pointer justify-between gap-2 rounded-r-md border p-2">
                 <p className="clash-font text-sm text-[#4F4F4F]">Categories</p>
-                <Image src="/DashboardImages/CaretDown.svg" width={18} height={18} alt="" />
+                <Image src="./Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
               </div>
             </div>
             <div className="relative my-5 flex gap-3 max-sm:hidden">
@@ -90,7 +90,7 @@ const UploadCases = () => {
                 </div>
                 <div className="flex w-[395px] cursor-pointer items-center justify-between gap-2 rounded-r-md border bg-[#ffffff] px-3">
                   <p className="clash-font text-sm text-[#4F4F4F]">Large Animal</p>
-                  <Image src="/DashboardImages/CaretDown.svg" width={18} height={18} alt="" />
+                  <Image src="./Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
                 </div>
               </div>
             </div>
@@ -152,7 +152,7 @@ const UploadCases = () => {
                         {/* Make sure the trash icon is not inside the input field */}
                         <div onClick={() => handleDelete(index)}>
                           <Image
-                            src="/DashboardImages/Trash.svg"
+                            src="./Dashboardimages/Trash.svg"
                             width={24}
                             height={24}
                             alt="Delete"
@@ -277,7 +277,7 @@ const UploadCases = () => {
               </div>
               <div className="flex  cursor-pointer items-center justify-between gap-2 rounded-r-md border bg-[#ffffff] px-3">
                 <p className="clash-font text-sm text-[#4F4F4F]">Microbilogy</p>
-                <Image src="/DashboardImages/CaretDown.svg" width={18} height={18} alt="" />
+                <Image src="./Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
               </div>
             </div>
           </div>
@@ -290,9 +290,9 @@ const UploadCases = () => {
             ></textarea>
             <div className="flex flex-col justify-between">
               <div>
-                <Image src="/AuthImages/remove.svg" width={43} height={43} alt="" />
+                <Image src="./AuthImages/remove.svg" width={43} height={43} alt="" />
               </div>
-              <Image src="/AuthImages/add.svg" width={43} height={43} alt="" />
+              <Image src="./AuthImages/add.svg" width={43} height={43} alt="" />
             </div>
           </div>
         </div>
@@ -304,7 +304,7 @@ const UploadCases = () => {
               </div>
               <div className="flex  cursor-pointer items-center justify-between gap-2 rounded-r-md border bg-[#ffffff] px-3">
                 <p className="clash-font text-sm text-[#4F4F4F]">Microbilogy</p>
-                <Image src="/DashboardImages/CaretDown.svg" width={18} height={18} alt="" />
+                <Image src="./Dashboardimages/CaretDown.svg" width={18} height={18} alt="" />
               </div>
             </div>
           </div>
@@ -317,9 +317,9 @@ const UploadCases = () => {
             ></textarea>
             <div className="flex flex-col justify-between">
               <div>
-                <Image src="/AuthImages/remove.svg" width={43} height={43} alt="" />
+                <Image src="./AuthImages/remove.svg" width={43} height={43} alt="" />
               </div>
-              <Image src="/AuthImages/add.svg" width={43} height={43} alt="" />
+              <Image src="./AuthImages/add.svg" width={43} height={43} alt="" />
             </div>
           </div>
         </div>

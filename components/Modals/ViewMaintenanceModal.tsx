@@ -76,7 +76,7 @@ const ViewMaintenanceModal: React.FC<ReceiptModalProps> = ({ isOpen, onClose, re
               <p className="text-sm text-[#707070]">Payment Status</p>
               <p className="text-sm font-medium text-[#212121]">{receiptData.paymentStatus}</p>
             </div>
-            <Image className="py-3" src="/DashboardImages/dotted-line.svg" width={292} height={143.79} alt="profile" />
+            <Image className="py-3" src="./Dashboardimages/dotted-line.svg" width={292} height={143.79} alt="profile" />
             <div className="flex justify-center">
               <p className="text-xs text-[#707070]">No Invoice Yet</p>
             </div>

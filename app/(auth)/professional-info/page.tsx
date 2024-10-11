@@ -52,7 +52,7 @@ const Page: React.FC = () => {
           <div className="w-full justify-center   ">
             <div className="flex items-center py-6 max-md:px-3 md:px-6 xl:min-w-[600px]">
               <Image
-                src="/AuthImages/CaretUp.svg"
+                src="./AuthImages/CaretUp.svg"
                 width={24}
                 height={24}
                 alt="profile"
@@ -61,7 +61,7 @@ const Page: React.FC = () => {
               />
               <div className="flex w-full items-center justify-center">
                 <Image
-                  src="/AuthImages/Professional.svg"
+                  src="./AuthImages/Professional.svg"
                   width={166}
                   height={24}
                   alt="profile"
@@ -100,7 +100,7 @@ const Page: React.FC = () => {
                       value={username}
                       onChange={handleUsernameChange}
                     />
-                    <Image src="/AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
+                    <Image src="./AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
                   </div>
                 </div>
 
@@ -116,7 +116,7 @@ const Page: React.FC = () => {
                       value={username}
                       onChange={handleUsernameChange}
                     />
-                    <Image src="/AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
+                    <Image src="./AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
                   </div>
                 </div>
 
@@ -132,7 +132,7 @@ const Page: React.FC = () => {
                       value={username}
                       onChange={handleUsernameChange}
                     />
-                    <Image src="/AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
+                    <Image src="./AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
                   </div>
                 </div>
               </form>
@@ -166,13 +166,13 @@ const Page: React.FC = () => {
       {showSuccessNotification && (
         <div className="animation-fade-in absolute bottom-16 m-5 flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#000000] bg-[#92E3A9] text-[#000000] shadow-[#05420514] md:right-16">
           <span className="clash-font text-sm text-[#000000]">Login Successfully</span>
-          <Image src="/AuthImages/Star2.svg" width={28.26} height={28.26} alt="dekalo" />
+          <Image src="./AuthImages/Star2.svg" width={28.26} height={28.26} alt="dekalo" />
         </div>
       )}
       {showErrorNotification && (
         <div className="animation-fade-in absolute bottom-16 m-5 flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#D14343] bg-[#FEE5E5] text-[#D14343] shadow-[#05420514] md:right-16">
           <span className="clash-font text-sm text-[#D14343]">{error}</span>
-          <Image src="/AuthImages/failed.png" width={28.26} height={28.26} alt="dekalo" />
+          <Image src="./AuthImages/failed.png" width={28.26} height={28.26} alt="dekalo" />
         </div>
       )}
     </>

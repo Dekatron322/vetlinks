@@ -31,19 +31,19 @@ const ReceiptModal: React.FC<ReceiptModalProps> = ({ isOpen, onClose, receiptDat
           <IoClose size={16} />
         </button>
         <div className="flex items-center gap-2 p-5">
-          <Image src="/DashboardImages/Tenant.svg" width={30} height={30} alt="profile" />
+          <Image src="./Dashboardimages/Tenant.svg" width={30} height={30} alt="profile" />
           <p>{receiptData.tenant}</p>
         </div>
         <div className="h-[1px] w-full bg-[#000000] opacity-5"></div>
         <div className="px-10 py-5 max-sm:px-4">
           <div className="flex w-full items-center justify-center">
-            <Image src="/DashboardImages/Success.svg" width={148} height={143.79} alt="profile" />
+            <Image src="./Dashboardimages/Success.svg" width={148} height={143.79} alt="profile" />
           </div>
-          <Image className="py-3" src="/DashboardImages/dotted-line.svg" width={292} height={143.79} alt="profile" />
+          <Image className="py-3" src="./Dashboardimages/dotted-line.svg" width={292} height={143.79} alt="profile" />
           <div className="flex w-full items-center justify-center ">
             <h5 className="text-2xl font-medium text-[#22266A]">NGN 2,500,000</h5>
           </div>
-          <Image className="py-3" src="/DashboardImages/dotted-line.svg" width={292} height={143.79} alt="profile" />
+          <Image className="py-3" src="./Dashboardimages/dotted-line.svg" width={292} height={143.79} alt="profile" />
           <div className="mb-4 flex justify-between">
             <p className="text-sm text-[#707070]">Reference No:</p>
             <p className="text-sm font-medium text-[#212121]">AB23-823864701c7</p>
@@ -75,7 +75,7 @@ const ReceiptModal: React.FC<ReceiptModalProps> = ({ isOpen, onClose, receiptDat
             <p className="text-sm text-[#707070]">Period of Payment:</p>
             <p className="text-sm font-medium text-[#212121]">June</p>
           </div>
-          <Image className="py-3" src="/DashboardImages/dotted-line.svg" width={292} height={143.79} alt="profile" />
+          <Image className="py-3" src="./Dashboardimages/dotted-line.svg" width={292} height={143.79} alt="profile" />
           <div className=" flex justify-center">
             <p className="text-xs text-[#707070]">June 14, 2023 6:30pm</p>
           </div>

@@ -45,7 +45,7 @@ export default function ServiceCharge() {
                 <div className="flex gap-4">
                   <div className="w-[30%] bg-white p-4 ">
                     <div className=" flex h-[45px] w-full items-center justify-between  gap-3 rounded-lg bg-[#F3F3F3] px-3 py-1 text-[#707070]">
-                      <Image src="/DashboardImages/Search.svg" width={16} height={16} alt="dekalo" />
+                      <Image src="./Dashboardimages/Search.svg" width={16} height={16} alt="dekalo" />
                       <input
                         type="text"
                         id="search"
@@ -186,7 +186,7 @@ export default function ServiceCharge() {
                     </div>
                     <div className="mt-auto flex w-full gap-4 px-4">
                       <div className=" flex h-[55px] w-full items-center justify-between  gap-3 rounded-lg bg-[#F3F3F3] px-4 py-1 text-[#707070]">
-                        <Image src="/DashboardImages/Search.svg" width={16} height={16} alt="dekalo" />
+                        <Image src="./Dashboardimages/Search.svg" width={16} height={16} alt="dekalo" />
                         <input
                           type="text"
                           id="search"

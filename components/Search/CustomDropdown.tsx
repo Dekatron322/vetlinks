@@ -72,8 +72,8 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ options, selectedOption
             {searchTerm && (
               <button onClick={clearSearch} className={styles.clearButton}>
                 <MdCancel />
-                {/* <Image className="icon-style" src="/cancel.svg" width={16} height={16} alt="cancel" />
-                <Image className="dark-icon-style" src="/dark_cancel.svg" width={16} height={16} alt="cancel" /> */}
+                {/* <Image className="icon-style" src="./cancel.svg" width={16} height={16} alt="cancel" />
+                <Image className="dark-icon-style" src="./dark_cancel.svg" width={16} height={16} alt="cancel" /> */}
               </button>
             )}
           </div>

@@ -56,7 +56,7 @@ const AddTenantModal: React.FC<AddEstateModalProps> = ({ isOpen, onClose, onSave
         <h2 className="mb-4 px-10 pt-5 text-base font-medium">Link Property ID</h2>
         <div className="h-[1px] w-full bg-[#000000] opacity-5"></div>
         <div className="flex w-full items-center justify-center py-5">
-          <Image src="/DashboardImages/linked.svg" width={116} height={112.97} alt="profile" />
+          <Image src="./Dashboardimages/linked.svg" width={116} height={112.97} alt="profile" />
         </div>
 
         <div className="px-10 pb-6">

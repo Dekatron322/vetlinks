@@ -91,16 +91,16 @@ const DashboardNav = () => {
                 className="clash-font flex h-[42px] content-center items-center justify-center gap-2 rounded-lg bg-[#1B5EED] px-5 text-white"
               >
                 Upload New Case
-                <Image src="/AuthImages/Plus.svg" width={20} height={20} alt="avatar" />
+                <Image src="./AuthImages/Plus.svg" width={20} height={20} alt="avatar" />
               </Link>
               <Link href="/" className="flex content-center items-center justify-center">
-                <Image src="/DashboardImages/Sun.svg" width={24} height={24} alt="avatar" />
+                <Image src="./Dashboardimages/Sun.svg" width={24} height={24} alt="avatar" />
               </Link>
               <div className="flex  items-center justify-center ">
-                <Image src="/DashboardImages/BellSimple.svg" width={24} height={24} alt="avatar" />
+                <Image src="./Dashboardimages/BellSimple.svg" width={24} height={24} alt="avatar" />
               </div>
               <Link href="/" className="flex content-center items-center justify-center">
-                <Image src="/DashboardImages/ic_round-account-circle.svg" width={32} height={32} alt="avatar" />
+                <Image src="./Dashboardimages/ic_round-account-circle.svg" width={32} height={32} alt="avatar" />
               </Link>
             </div>
           </div>
@@ -109,16 +109,16 @@ const DashboardNav = () => {
       <nav className="block border-b  px-16 py-4 max-md:px-3 md:hidden">
         <div className="flex items-center justify-between">
           <Link href="/" className="content-center">
-            <Image src="/AuthImages/collapsed.svg" width={128} height={43} alt="dekalo" />
+            <Image src="./AuthImages/collapsed.svg" width={128} height={43} alt="dekalo" />
           </Link>
           <div className="flex  items-center justify-center gap-3  px-1">
             <Link href="/" className="content-center">
-              <Image src="/DashboardImages/iconoir_search.svg" width={24} height={24} alt="dekalo" />
+              <Image src="./Dashboardimages/iconoir_search.svg" width={24} height={24} alt="dekalo" />
             </Link>
-            <Image src="/DashboardImages/ic_round-account-circle.svg" width={32} height={32} alt="avatar" />
+            <Image src="./Dashboardimages/ic_round-account-circle.svg" width={32} height={32} alt="avatar" />
 
             <div onClick={toggleNav} className="content-center">
-              <Image src="/DashboardImages/List.svg" width={24} height={24} alt="dekalo" />
+              <Image src="./Dashboardimages/List.svg" width={24} height={24} alt="dekalo" />
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@ const DashboardNav = () => {
           }`}
         >
           <div className="flex items-center justify-between p-4 pt-3">
-            <Image className="" src="/AuthImages/collapsed.svg" height={80} width={128} alt="" />
+            <Image className="" src="./AuthImages/collapsed.svg" height={80} width={128} alt="" />
             <RxCross2 className="text-black" onClick={toggleNav} style={{ cursor: "pointer" }} />
           </div>
 
@@ -137,7 +137,7 @@ const DashboardNav = () => {
             <p className="clash-font text-xs">EXPLORE</p>
             <Link href="/dashboard" className={`flex items-center gap-2 pb-2 ${getNavLinkClass("/dashboard")}`}>
               <Image
-                src={getNavImageSrc("/dashboard", "/AuthImages/Globe.svg", "/AuthImages/Globe.svg")}
+                src={getNavImageSrc("/dashboard", "./AuthImages/Globe.svg", "./AuthImages/Globe.svg")}
                 width={20}
                 height={20}
                 alt="avatar"
@@ -147,7 +147,7 @@ const DashboardNav = () => {
 
             <Link href="/doctors" className={`flex items-center gap-2 pb-2 ${getNavLinkClass("/doctors")}`}>
               <Image
-                src={getNavImageSrc("/doctors", "/AuthImages/Users.svg", "/AuthImages/Users.svg")}
+                src={getNavImageSrc("/doctors", "./AuthImages/Users.svg", "./AuthImages/Users.svg")}
                 width={20}
                 height={20}
                 alt="avatar"
@@ -156,7 +156,7 @@ const DashboardNav = () => {
             </Link>
             <Link href="/upload-cases" className={`flex items-center gap-2 pb-2 ${getNavLinkClass("/upload-cases")}`}>
               <Image
-                src={getNavImageSrc("/upload-cases", "/AuthImages/FilePlus.svg", "/AuthImages/FilePlus.svg")}
+                src={getNavImageSrc("/upload-cases", "./AuthImages/FilePlus.svg", "./AuthImages/FilePlus.svg")}
                 width={20}
                 height={20}
                 alt="avatar"
@@ -169,7 +169,7 @@ const DashboardNav = () => {
               className={`flex items-center gap-2 pb-3 ${getNavLinkClass("/recently-viewed")}`}
             >
               <Image
-                src={getNavImageSrc("/recently-viewed", "/AuthImages/Clock.svg", "/AuthImages/Clock.svg")}
+                src={getNavImageSrc("/recently-viewed", "./AuthImages/Clock.svg", "./AuthImages/Clock.svg")}
                 width={20}
                 height={20}
                 alt="avatar"
@@ -180,7 +180,7 @@ const DashboardNav = () => {
             <p className="clash-font text-xs">MANAGE CASES</p>
             <Link href="/my-cases" className={`flex items-center gap-2 pb-2 ${getNavLinkClass("/my-cases")}`}>
               <Image
-                src={getNavImageSrc("/my-cases", "/AuthImages/FolderOpen.svg", "/AuthImages/FolderOpen.svg")}
+                src={getNavImageSrc("/my-cases", "./AuthImages/FolderOpen.svg", "./AuthImages/FolderOpen.svg")}
                 width={20}
                 height={20}
                 alt="avatar"
@@ -190,7 +190,7 @@ const DashboardNav = () => {
 
             <Link href="/saved-cases" className={`flex items-center gap-2 pb-4 ${getNavLinkClass("/saved-cases")}`}>
               <Image
-                src={getNavImageSrc("/saved-cases", "/AuthImages/FloppyDisk.svg", "/AuthImages/FloppyDisk.svg")}
+                src={getNavImageSrc("/saved-cases", "./AuthImages/FloppyDisk.svg", "./AuthImages/FloppyDisk.svg")}
                 width={20}
                 height={20}
                 alt="avatar"
@@ -201,7 +201,7 @@ const DashboardNav = () => {
             <p className="clash-font text-xs">SUPPORT</p>
             <Link href="/guidelines" className={`flex items-center gap-2 pb-2 ${getNavLinkClass("/guidelines")}`}>
               <Image
-                src={getNavImageSrc("/guidelines", "/AuthImages/Question.svg", "/AuthImages/Question.svg")}
+                src={getNavImageSrc("/guidelines", "./AuthImages/Question.svg", "./AuthImages/Question.svg")}
                 width={20}
                 height={20}
                 alt="avatar"
@@ -211,7 +211,7 @@ const DashboardNav = () => {
 
             <Link href="/support" className={`flex items-center gap-2 pb-4 ${getNavLinkClass("/support")}`}>
               <Image
-                src={getNavImageSrc("/support", "/AuthImages/Headset.svg", "/AuthImages/Headset.svg")}
+                src={getNavImageSrc("/support", "./AuthImages/Headset.svg", "./AuthImages/Headset.svg")}
                 width={20}
                 height={20}
                 alt="avatar"
@@ -225,7 +225,7 @@ const DashboardNav = () => {
               className={`flex items-center gap-2 pb-2 ${getNavLinkClass("/account-settings")}`}
             >
               <Image
-                src={getNavImageSrc("/account-settings", "/AuthImages/Gear.svg", "/AuthImages/Gear.svg")}
+                src={getNavImageSrc("/account-settings", "./AuthImages/Gear.svg", "./AuthImages/Gear.svg")}
                 width={20}
                 height={20}
                 alt="avatar"
@@ -235,7 +235,7 @@ const DashboardNav = () => {
 
             <Link href="/log-out" className={`flex items-center gap-2 pb-4 ${getNavLinkClass("/log-out")}`}>
               <Image
-                src={getNavImageSrc("/log-out", "/AuthImages/SignOut.svg", "/AuthImages/SignOut.svg")}
+                src={getNavImageSrc("/log-out", "./AuthImages/SignOut.svg", "./AuthImages/SignOut.svg")}
                 width={20}
                 height={20}
                 alt="avatar"
