@@ -23,7 +23,7 @@ const Page: React.FC = () => {
     setLoading(true)
 
     {
-      router.push("/personal-info")
+      router.push("/dashboard")
     }
 
     setLoading(false) // You can also move this after the redirect if you want
