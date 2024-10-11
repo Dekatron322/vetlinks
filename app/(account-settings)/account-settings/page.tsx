@@ -195,7 +195,7 @@ export default function AddServiceUser() {
 
                 <div className="flex w-full flex-col items-center justify-center gap-3 py-3">
                   <Image
-                    src="./Dashboardimages/Avatar.svg"
+                    src="https://raw.githubusercontent.com/Dekatron322/vetlinks/41a36681eaee567c8bd3d9d49c61f1a3383c3392/public/DashboardImages/Avatar.svg"
                     width={100}
                     height={100}
                     alt="profile"
