@@ -186,9 +186,12 @@ const DashboardNav = () => {
               <p className="mt-1">My Cases</p>
             </Link>
 
-            <Link href="/saved-cases" className={`flex items-center gap-2 pb-4 ${getNavLinkClass("/saved-cases")}`}>
+            <Link
+              href="/bookmarked-cases"
+              className={`flex items-center gap-2 pb-4 ${getNavLinkClass("/bookmarked-cases")}`}
+            >
               <Image
-                src={getNavImageSrc("/saved-cases", "/AuthImages/FloppyDisk.svg", "/AuthImages/FloppyDisk.svg")}
+                src={getNavImageSrc("/bookmarked-cases", "/AuthImages/FloppyDisk.svg", "/AuthImages/FloppyDisk.svg")}
                 width={20}
                 height={20}
                 alt="avatar"

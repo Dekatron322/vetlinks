@@ -131,7 +131,7 @@ const Page: React.FC = () => {
                       ) : (
                         <Image
                           className="icon-style"
-                          src="AuthImages/eye-close-line.png"
+                          src="/AuthImages/eye-close-line.png"
                           width={24}
                           height={24}
                           alt="toggle password visibility"
