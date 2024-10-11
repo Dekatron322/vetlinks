@@ -87,19 +87,17 @@ const DashboardNav = () => {
           <div className="">
             <div className="flex content-center items-center justify-center gap-5">
               <Link
-                href="/"
+                href="/upload-cases"
                 className="clash-font flex h-[42px] content-center items-center justify-center gap-2 rounded-lg bg-[#1B5EED] px-5 text-white"
               >
                 Upload New Case
                 <Image src="/AuthImages/Plus.svg" width={20} height={20} alt="avatar" />
               </Link>
-              <Link href="/" className="flex content-center items-center justify-center">
-                <Image src="/DashboardImages/Sun.svg" width={24} height={24} alt="avatar" />
-              </Link>
+
               <div className="flex  items-center justify-center ">
                 <Image src="/DashboardImages/BellSimple.svg" width={24} height={24} alt="avatar" />
               </div>
-              <Link href="/" className="flex content-center items-center justify-center">
+              <Link href="#" className="flex content-center items-center justify-center">
                 <Image src="/DashboardImages/ic_round-account-circle.svg" width={32} height={32} alt="avatar" />
               </Link>
             </div>
