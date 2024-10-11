@@ -5,6 +5,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
+type Department = "Male" | "Female"
+
 const Page: React.FC = () => {
   const [username, setUsername] = useState("")
 
@@ -12,6 +14,8 @@ const Page: React.FC = () => {
   const [error, setError] = useState<string | null>(null)
   const [showSuccessNotification, setShowSuccessNotification] = useState(false)
   const [showErrorNotification, setShowErrorNotification] = useState(false)
+  const [searchTerm, setSearchTerm] = useState<Department | "">("")
+  const [showDropdown, setShowDropdown] = useState(false)
 
   const router = useRouter() // Initialize the router
 
@@ -35,6 +39,22 @@ const Page: React.FC = () => {
       return () => clearTimeout(timer) // Clean up the timeout if component unmounts
     }
   }, [showSuccessNotification, showErrorNotification])
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value as Department | "")
+    setShowDropdown(true)
+  }
+
+  const handleDropdownSelect = (department: Department) => {
+    setSearchTerm(department)
+    setShowDropdown(false)
+  }
+
+  const handleCancelSearch = () => {
+    setSearchTerm("")
+    setShowDropdown(false)
+  }
+  const departments: Department[] = ["Male", "Female"]
 
   return (
     <>
@@ -133,7 +153,7 @@ const Page: React.FC = () => {
                 <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
                   <div className="flex">
                     <input
-                      type="text"
+                      type="date"
                       id="username"
                       placeholder="12/12/2001"
                       className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
@@ -141,24 +161,46 @@ const Page: React.FC = () => {
                       value={username}
                       onChange={handleUsernameChange}
                     />
-                    <Image src="/AuthImages/CalendarDots.svg" width={24} height={24} alt="dekalo" />
+                    {/* <Image src="/AuthImages/CalendarDots.svg" width={24} height={24} alt="dekalo" /> */}
                   </div>
                 </div>
 
-                <label className=" text-xs">Gender</label>
-                <div className="search-bg mb-2  h-[48px] items-center justify-between rounded-lg px-3 py-3 hover:border-[#1B5EED4D] focus:border-[#1B5EED4D] focus:bg-[#FBFAFC] max-sm:mb-2 xl:w-[536px]">
-                  <div className="flex">
+                <div className="relative">
+                  <label className=" text-xs">Gender</label>
+                  <div className="search-bg mb-3 flex h-[48px] items-center justify-between gap-3 rounded px-3 py-1 hover:border-[#5378F6] focus:border-[#5378F6] focus:bg-[#FBFAFC] max-sm:mb-2 max-sm:w-full xl:w-[536px]">
+                    <Image src="/AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
                     <input
                       type="text"
-                      id="username"
-                      placeholder="12/12/2001"
+                      id="search"
+                      placeholder="Select department"
                       className="h-[24px] w-full bg-transparent text-base outline-none focus:outline-none"
-                      style={{ width: "100%", height: "24px" }}
-                      value={username}
-                      onChange={handleUsernameChange}
+                      style={{ width: "100%", height: "45px" }}
+                      value={searchTerm}
+                      onChange={handleInputChange}
+                      onFocus={() => setShowDropdown(true)}
                     />
-                    <Image src="/AuthImages/CaretUp1.svg" width={24} height={24} alt="dekalo" />
+                    {searchTerm && (
+                      <button type="button" className="focus:outline-none" onClick={handleCancelSearch}>
+                        <Image className="icon-style" src="/cancel.svg" width={16} height={16} alt="cancel" />
+                        <Image className="dark-icon-style" src="/dark_cancel.svg" width={16} height={16} alt="cancel" />
+                      </button>
+                    )}
                   </div>
+                  {showDropdown && (
+                    <div className="dropdown absolute left-0 top-full z-10 w-full rounded-md">
+                      {departments
+                        .filter((department) => department.toLowerCase().includes(searchTerm.toLowerCase()))
+                        .map((department, index) => (
+                          <div
+                            key={index}
+                            className="cursor-pointer overflow-hidden px-4 py-2 hover:bg-[#747A80]"
+                            onClick={() => handleDropdownSelect(department)}
+                          >
+                            <p className="text-xs font-medium">{department}</p>
+                          </div>
+                        ))}
+                    </div>
+                  )}
                 </div>
               </form>
             </div>

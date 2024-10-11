@@ -167,7 +167,7 @@ body {
 } */
 
 .dropdown {
-  @apply bg-[#E5F0FD];
+  @apply bg-[#ffffff];
 }
 
 .modal-dropdown {
