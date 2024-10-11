@@ -9,6 +9,17 @@ export const LogoIcon = () => (
   </section>
 )
 
+export const CollapsedLogoIcon = () => (
+  <section>
+    <Link href="/" className="icon-style content-center">
+      <Image src="./AuthImages/logoSmall.svg" width={40} height={43} alt="dekalo" />
+    </Link>
+    <Link href="/" className="dark-icon-style content-center">
+      <Image src="./AuthImages/logoSmall.svg" width={40} height={43} alt="dekalo" />
+    </Link>
+  </section>
+)
+
 export const DashboardIcon = ({ isActive }: { isActive: boolean }) => (
   <Image src={isActive ? "./AuthImages/Globe.svg" : "./AuthImages/Globe.svg"} alt="Dashboard" width={20} height={20} />
 )
