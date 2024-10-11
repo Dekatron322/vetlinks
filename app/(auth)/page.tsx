@@ -131,7 +131,7 @@ const Page: React.FC = () => {
                       ) : (
                         <Image
                           className="icon-style"
-                          src="../AuthImages/eye-close-line.png"
+                          src="AuthImages/eye-close-line.png"
                           width={24}
                           height={24}
                           alt="toggle password visibility"
@@ -174,13 +174,13 @@ const Page: React.FC = () => {
       {showSuccessNotification && (
         <div className="animation-fade-in absolute bottom-16 m-5 flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#000000] bg-[#92E3A9] text-[#000000] shadow-[#05420514] md:right-16">
           <span className="clash-font text-sm text-[#000000]">Login Successfully</span>
-          <Image src="../AuthImages/Star2.svg" width={28.26} height={28.26} alt="dekalo" />
+          <Image src="./AuthImages/Star2.svg" width={28.26} height={28.26} alt="dekalo" />
         </div>
       )}
       {showErrorNotification && (
         <div className="animation-fade-in absolute bottom-16 m-5 flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#D14343] bg-[#FEE5E5] text-[#D14343] shadow-[#05420514] md:right-16">
           <span className="clash-font text-sm text-[#D14343]">{error}</span>
-          <Image src="../AuthImages/failed.png" width={28.26} height={28.26} alt="dekalo" />
+          <Image src="./AuthImages/failed.png" width={28.26} height={28.26} alt="dekalo" />
         </div>
       )}
     </>

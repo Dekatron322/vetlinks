@@ -60,7 +60,7 @@ export default function ServiceCharge() {
                     <div className="mt-4 flex">
                       <div className="flex w-full justify-between">
                         <div className="flex gap-2">
-                          <Image src="/Icons/chats-user.svg" width={50} height={50} alt="dekalo" />
+                          <Image src="./Icons/chats-user.svg" width={50} height={50} alt="dekalo" />
                           <div>
                             <p className="mb-[10px] font-medium">House No. 45</p>
                             <p className="text-xs">We should meet later in the....</p>
@@ -78,7 +78,7 @@ export default function ServiceCharge() {
                     <div className="mt-4 flex">
                       <div className="flex w-full justify-between">
                         <div className="flex gap-2">
-                          <Image src="/Icons/chats-user.svg" width={50} height={50} alt="dekalo" />
+                          <Image src="./Icons/chats-user.svg" width={50} height={50} alt="dekalo" />
                           <div>
                             <p className="mb-[10px] font-medium">House No. 45</p>
                             <p className="text-xs">We should meet later in the....</p>
@@ -96,7 +96,7 @@ export default function ServiceCharge() {
                     <div className="mt-4 flex">
                       <div className="flex w-full justify-between">
                         <div className="flex gap-2">
-                          <Image src="/Icons/chats-user.svg" width={50} height={50} alt="dekalo" />
+                          <Image src="./Icons/chats-user.svg" width={50} height={50} alt="dekalo" />
                           <div>
                             <p className="mb-[10px] font-medium">House No. 45</p>
                             <p className="text-xs">We should meet later in the....</p>
@@ -114,7 +114,7 @@ export default function ServiceCharge() {
                     <div className="mt-4 flex">
                       <div className="flex w-full justify-between">
                         <div className="flex gap-2">
-                          <Image src="/Icons/chats-user.svg" width={50} height={50} alt="dekalo" />
+                          <Image src="./Icons/chats-user.svg" width={50} height={50} alt="dekalo" />
                           <div>
                             <p className="mb-[10px] font-medium">House No. 45</p>
                             <p className="text-xs">We should meet later in the....</p>
