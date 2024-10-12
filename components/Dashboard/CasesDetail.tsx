@@ -25,7 +25,7 @@ const CasesDetails = () => {
         transition={{ ease: "easeOut", duration: 1 }}
       >
         <div>
-          <div className="flex items-center gap-3">
+          <div className="flex w-full items-center gap-3">
             <Image
               onClick={handleGoBack}
               src="https://raw.githubusercontent.com/Dekatron322/vetlinks/4c115790e4a37c6a55932282fa6c7361d4863961/public/DashboardImages/CaretLeft.svg"
@@ -69,7 +69,7 @@ const CasesDetails = () => {
               </div>
             </div>
 
-            <div className="flex ">
+            <div className="flex w-full">
               <div className="flex items-center gap-2 rounded-s-md border bg-white px-3">
                 <p className="text-sm text-[#4F4F4F]">Categories</p>
               </div>
@@ -90,13 +90,29 @@ const CasesDetails = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 1 }}
         >
-          <div style={{ position: "relative", width: "100%", height: "400px", borderRadius: "8px" }}>
+          <div
+            style={{ position: "relative", width: "100%", height: "400px", borderRadius: "8px" }}
+            className="max-sm:hidden"
+          >
             <Image
               src="/DashboardImages/imgLarge.svg"
               alt=""
               layout="fill"
               objectFit="contain"
-              className="rounded-lg"
+              className="rounded-lg max-sm:hidden"
+            />
+          </div>
+
+          <div
+            style={{ position: "relative", width: "100%", height: "400px", borderRadius: "8px" }}
+            className="sm:hidden"
+          >
+            <Image
+              src="/DashboardImages/moo.png"
+              alt=""
+              layout="fill"
+              objectFit="contain"
+              className="rounded-lg sm:hidden"
             />
           </div>
           <p className="clash-font py-3 text-xl font-black text-[#00000080]">
